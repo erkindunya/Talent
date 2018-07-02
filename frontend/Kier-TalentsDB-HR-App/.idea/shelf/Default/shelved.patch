@@ -1,0 +1,1676 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"Name\": \"talent-record-forms\",\n  \"version\": \"0.0.1\",\n  \"private\": true,\n  \"engines\": {\n    \"node\": \">=0.10.0\"\n  },\n  \"scripts\": {\n    \"build\": \"gulp bundle\",\n    \"clean\": \"gulp clean\",\n    \"test\": \"gulp test\"\n  },\n  \"dependencies\": {\n    \"@microsoft/sp-core-library\": \"~1.4.1\",\n    \"@microsoft/sp-lodash-subset\": \"~1.4.1\",\n    \"@microsoft/sp-office-ui-fabric-core\": \"~1.4.1\",\n    \"@microsoft/sp-webpart-base\": \"~1.4.1\",\n    \"@types/react\": \"15.6.6\",\n    \"@types/react-dom\": \"15.5.6\",\n    \"@types/webpack-env\": \">=1.12.1 <1.14.0\",\n    \"antd\": \"^3.4.4\",\n    \"react\": \"15.6.2\",\n    \"react-dom\": \"15.6.2\",\n    \"sp-pnp-js\": \"^3.0.7\",\n    \"webpack\": \"^4.8.1\"\n  },\n  \"devDependencies\": {\n    \"@microsoft/sp-build-web\": \"~1.4.1\",\n    \"@microsoft/sp-module-interfaces\": \"~1.4.1\",\n    \"@microsoft/sp-webpart-workbench\": \"~1.4.1\",\n    \"@types/chai\": \">=3.4.34 <3.6.0\",\n    \"@types/mocha\": \">=2.2.33 <2.6.0\",\n    \"ajv\": \"~5.2.2\",\n    \"babel-plugin-import\": \"^1.7.0\",\n    \"css-loader\": \"^0.28.11\",\n    \"gulp\": \"~3.9.1\",\n    \"less\": \"^3.0.4\",\n    \"less-loader\": \"^4.1.0\",\n    \"less-vars-to-js\": \"^1.2.1\",\n    \"lodash\": \"^4.17.10\",\n    \"mobx\": \"^4.2.0\",\n    \"mobx-react\": \"^5.1.2\",\n    \"mobx-state-tree\": \"^2.0.4\",\n    \"sp-rest-proxy\": \"^2.5.10\",\n    \"style-loader\": \"^0.21.0\",\n    \"webpack-cli\": \"^2.1.3\"\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package.json	(date 1526454522000)
++++ package.json	(date 1526476904500)
+@@ -18,11 +18,11 @@
+     "@types/react": "15.6.6",
+     "@types/react-dom": "15.5.6",
+     "@types/webpack-env": ">=1.12.1 <1.14.0",
+-    "antd": "^3.4.4",
++    "antd": "^3.5.2",
+     "react": "15.6.2",
+     "react-dom": "15.6.2",
+-    "sp-pnp-js": "^3.0.7",
+-    "webpack": "^4.8.1"
++    "sp-pnp-js": "^3.0.8",
++    "webpack": "^4.8.3"
+   },
+   "devDependencies": {
+     "@microsoft/sp-build-web": "~1.4.1",
+@@ -38,9 +38,9 @@
+     "less-loader": "^4.1.0",
+     "less-vars-to-js": "^1.2.1",
+     "lodash": "^4.17.10",
+-    "mobx": "^4.2.0",
++    "mobx": "^4.2.1",
+     "mobx-react": "^5.1.2",
+-    "mobx-state-tree": "^2.0.4",
++    "mobx-state-tree": "^2.0.5",
+     "sp-rest-proxy": "^2.5.10",
+     "style-loader": "^0.21.0",
+     "webpack-cli": "^2.1.3"
+Index: package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package-lock.json	(date 1526454522000)
++++ package-lock.json	(date 1526477046288)
+@@ -1,5 +1,4 @@
+ {
+-  "Name": "talent-record-forms",
+   "version": "0.0.1",
+   "lockfileVersion": 1,
+   "requires": true,
+@@ -2921,83 +2920,118 @@
+       }
+     },
+     "@webassemblyjs/ast": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.3.1.tgz",
+-      "integrity": "sha512-WJKy500MK6cM5LNcOjKlLHnYtTU5PcmL06iXErYriA90GLn7W/EzIyknZRx0Bj3W6FjYKTPkHADdE3GM0ZJk1Q==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.4.3.tgz",
++      "integrity": "sha512-S6npYhPcTHDYe9nlsKa9CyWByFi8Vj8HovcAgtmMAQZUOczOZbQ8CnwMYKYC5HEZzxEE+oY0jfQk4cVlI3J59Q==",
+       "requires": {
+-        "@webassemblyjs/helper-wasm-bytecode": "1.3.1",
+-        "@webassemblyjs/wast-parser": "1.3.1",
+-        "webassemblyjs": "1.3.1"
++        "@webassemblyjs/helper-wasm-bytecode": "1.4.3",
++        "@webassemblyjs/wast-parser": "1.4.3",
++        "debug": "3.1.0",
++        "webassemblyjs": "1.4.3"
++      },
++      "dependencies": {
++        "debug": {
++          "version": "3.1.0",
++          "resolved": "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz",
++          "integrity": "sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==",
++          "requires": {
++            "ms": "2.0.0"
++          }
++        }
+       }
+     },
+     "@webassemblyjs/floating-point-hex-parser": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.3.1.tgz",
+-      "integrity": "sha512-8kCRyt0bQSnZD67UQfDTONO0jD7HCxmNUUJfT9OnVok0RWYs/AnpS83kfHtQjHucRMyx2d+YlsJWkdhXdLobqA=="
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.4.3.tgz",
++      "integrity": "sha512-3zTkSFswwZOPNHnzkP9ONq4bjJSeKVMcuahGXubrlLmZP8fmTIJ58dW7h/zOVWiFSuG2em3/HH3BlCN7wyu9Rw=="
+     },
+     "@webassemblyjs/helper-buffer": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-buffer/-/helper-buffer-1.3.1.tgz",
+-      "integrity": "sha512-xIcxcfkBrrivLauyXJ57i/ArPy+kFgZjMDrxm4pSUBG2VtwwYKjOZAyjf4qsM4JbP5vRuRzMD2gp+a9WMyC3PA=="
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-buffer/-/helper-buffer-1.4.3.tgz",
++      "integrity": "sha512-e8+KZHh+RV8MUvoSRtuT1sFXskFnWG9vbDy47Oa166xX+l0dD5sERJ21g5/tcH8Yo95e9IN3u7Jc3NbhnUcSkw==",
++      "requires": {
++        "debug": "3.1.0"
++      },
++      "dependencies": {
++        "debug": {
++          "version": "3.1.0",
++          "resolved": "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz",
++          "integrity": "sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==",
++          "requires": {
++            "ms": "2.0.0"
++          }
++        }
++      }
+     },
+     "@webassemblyjs/helper-code-frame": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-code-frame/-/helper-code-frame-1.3.1.tgz",
+-      "integrity": "sha512-X305tLl7qeTixYz0/Y0Xu+bcNizJLfHUZ1iTiVtorDkh5mLrIZ8hLkkM2oYNSq/oaoW6gpHDrHRfYZItExTeeQ==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-code-frame/-/helper-code-frame-1.4.3.tgz",
++      "integrity": "sha512-9FgHEtNsZQYaKrGCtsjswBil48Qp1agrzRcPzCbQloCoaTbOXLJ9IRmqT+uEZbenpULLRNFugz3I4uw18hJM8w==",
+       "requires": {
+-        "@webassemblyjs/wast-printer": "1.3.1"
++        "@webassemblyjs/wast-printer": "1.4.3"
+       }
+     },
+     "@webassemblyjs/helper-fsm": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-fsm/-/helper-fsm-1.3.1.tgz",
+-      "integrity": "sha512-Be1G8ZDTP1T+vXaVMraXY8+SoJnOVNarRkByrM83PHjW+vqUwubwYPpA4U2NBTz4WG19vYpfsUccCZwOPiyK+Q=="
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-fsm/-/helper-fsm-1.4.3.tgz",
++      "integrity": "sha512-JINY76U+702IRf7ePukOt037RwmtH59JHvcdWbTTyHi18ixmQ+uOuNhcdCcQHTquDAH35/QgFlp3Y9KqtyJsCQ=="
+     },
+     "@webassemblyjs/helper-wasm-bytecode": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.3.1.tgz",
+-      "integrity": "sha512-rOIjy/Cmd+hspim9B/c7dUqhW8AyKsRceVcQtWljIvFSitx9rsL5m73NGaGFUVAEaMDvvEzYczehjwbrHPz4KA=="
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.4.3.tgz",
++      "integrity": "sha512-I7bS+HaO0K07Io89qhJv+z1QipTpuramGwUSDkwEaficbSvCcL92CUZEtgykfNtk5wb0CoLQwWlmXTwGbNZUeQ=="
+     },
+     "@webassemblyjs/helper-wasm-section": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.3.1.tgz",
+-      "integrity": "sha512-mDBlDsrsl1Y7LGEdmlTzdDwr/SCe2l9ZsQZ1GYXird71jlU/0djs5ZXfxyufd1G3wO+yuxW997m50Patk4s1fA==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.4.3.tgz",
++      "integrity": "sha512-p0yeeO/h2r30PyjnJX9xXSR6EDcvJd/jC6xa/Pxg4lpfcNi7JUswOpqDToZQ55HMMVhXDih/yqkaywHWGLxqyQ==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/helper-buffer": "1.3.1",
+-        "@webassemblyjs/helper-wasm-bytecode": "1.3.1",
+-        "@webassemblyjs/wasm-gen": "1.3.1"
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/helper-buffer": "1.4.3",
++        "@webassemblyjs/helper-wasm-bytecode": "1.4.3",
++        "@webassemblyjs/wasm-gen": "1.4.3",
++        "debug": "3.1.0"
++      },
++      "dependencies": {
++        "debug": {
++          "version": "3.1.0",
++          "resolved": "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz",
++          "integrity": "sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==",
++          "requires": {
++            "ms": "2.0.0"
++          }
++        }
+       }
+     },
+     "@webassemblyjs/leb128": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/leb128/-/leb128-1.3.1.tgz",
+-      "integrity": "sha512-CgkWUXRINTGs/+Swp8COvwOk5Ci4spv1MKDdGfRecyFiLGs7wYm/p4fgRQWzBEFaotEP/ftPa9O6BFykrwghzw==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/leb128/-/leb128-1.4.3.tgz",
++      "integrity": "sha512-4u0LJLSPzuRDWHwdqsrThYn+WqMFVqbI2ltNrHvZZkzFPO8XOZ0HFQ5eVc4jY/TNHgXcnwrHjONhPGYuuf//KQ==",
+       "requires": {
+         "leb": "0.3.0"
+       }
+     },
+     "@webassemblyjs/validation": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/validation/-/validation-1.3.1.tgz",
+-      "integrity": "sha512-afp32tgDVwW53lQc58PtIBifyZf3qGzRpl9r+8SNHzPOe6lBamjK1RWEA83YHwvu7qk6uBV7IAeUC7BgdxPtsA==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/validation/-/validation-1.4.3.tgz",
++      "integrity": "sha512-R+rRMKfhd9mq0rj2mhU9A9NKI2l/Rw65vIYzz4lui7eTKPcCu1l7iZNi4b9Gen8D42Sqh/KGiaQNk/x5Tn/iBQ==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1"
++        "@webassemblyjs/ast": "1.4.3"
+       }
+     },
+     "@webassemblyjs/wasm-edit": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-edit/-/wasm-edit-1.3.1.tgz",
+-      "integrity": "sha512-0T75tHKR0dIDiO3oqBZmo+2McJy5FkgSL2AIP3rJvqrDFaJ19jCrC5KLqGbqo3ZicdY9x9Xdc9zaY2A1TCkAiw==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-edit/-/wasm-edit-1.4.3.tgz",
++      "integrity": "sha512-qzuwUn771PV6/LilqkXcS0ozJYAeY/OKbXIWU3a8gexuqb6De2p4ya/baBeH5JQ2WJdfhWhSvSbu86Vienttpw==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/helper-buffer": "1.3.1",
+-        "@webassemblyjs/helper-wasm-bytecode": "1.3.1",
+-        "@webassemblyjs/helper-wasm-section": "1.3.1",
+-        "@webassemblyjs/wasm-gen": "1.3.1",
+-        "@webassemblyjs/wasm-opt": "1.3.1",
+-        "@webassemblyjs/wasm-parser": "1.3.1",
+-        "@webassemblyjs/wast-printer": "1.3.1",
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/helper-buffer": "1.4.3",
++        "@webassemblyjs/helper-wasm-bytecode": "1.4.3",
++        "@webassemblyjs/helper-wasm-section": "1.4.3",
++        "@webassemblyjs/wasm-gen": "1.4.3",
++        "@webassemblyjs/wasm-opt": "1.4.3",
++        "@webassemblyjs/wasm-parser": "1.4.3",
++        "@webassemblyjs/wast-printer": "1.4.3",
+         "debug": "3.1.0"
+       },
+       "dependencies": {
+@@ -3012,58 +3046,69 @@
+       }
+     },
+     "@webassemblyjs/wasm-gen": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-gen/-/wasm-gen-1.3.1.tgz",
+-      "integrity": "sha512-iYgQ3UJpsKiJnXerHulT//JpJAHuLavqMPEtUiRnSh0r/WvZh8pNtYBaN2v64+d9yTtu9aMlJmlKi6uz1j5FFg==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-gen/-/wasm-gen-1.4.3.tgz",
++      "integrity": "sha512-eR394T8dHZfpLJ7U/Z5pFSvxl1L63JdREebpv9gYc55zLhzzdJPAuxjBYT4XqevUdW67qU2s0nNA3kBuNJHbaQ==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/helper-wasm-bytecode": "1.3.1",
+-        "@webassemblyjs/leb128": "1.3.1"
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/helper-wasm-bytecode": "1.4.3",
++        "@webassemblyjs/leb128": "1.4.3"
+       }
+     },
+     "@webassemblyjs/wasm-opt": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-opt/-/wasm-opt-1.3.1.tgz",
+-      "integrity": "sha512-Eqi1he5VuGxMYKGhrBU+UxUhIwTDlnuvJmwrad3k4dD2UQpqu3HedRndGdJTQ68xj2GqDCdE6QiLzjytSN4KVQ==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-opt/-/wasm-opt-1.4.3.tgz",
++      "integrity": "sha512-7Gp+nschuKiDuAL1xmp4Xz0rgEbxioFXw4nCFYEmy+ytynhBnTeGc9W9cB1XRu1w8pqRU2lbj2VBBA4cL5Z2Kw==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/helper-buffer": "1.3.1",
+-        "@webassemblyjs/wasm-gen": "1.3.1",
+-        "@webassemblyjs/wasm-parser": "1.3.1"
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/helper-buffer": "1.4.3",
++        "@webassemblyjs/wasm-gen": "1.4.3",
++        "@webassemblyjs/wasm-parser": "1.4.3",
++        "debug": "3.1.0"
++      },
++      "dependencies": {
++        "debug": {
++          "version": "3.1.0",
++          "resolved": "https://registry.npmjs.org/debug/-/debug-3.1.0.tgz",
++          "integrity": "sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==",
++          "requires": {
++            "ms": "2.0.0"
++          }
++        }
+       }
+     },
+     "@webassemblyjs/wasm-parser": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-parser/-/wasm-parser-1.3.1.tgz",
+-      "integrity": "sha512-euRnqP/bky9DGbXf5Nqvtmc5soOM7xkvwI2H+LSP88NAFkcGMPEnrAP4UbsFAH+ESnS4kAW6wL5UyzjWBiiTbA==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-parser/-/wasm-parser-1.4.3.tgz",
++      "integrity": "sha512-KXBjtlwA3BVukR/yWHC9GF+SCzBcgj0a7lm92kTOaa4cbjaTaa47bCjXw6cX4SGQpkncB9PU2hHGYVyyI7wFRg==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/helper-wasm-bytecode": "1.3.1",
+-        "@webassemblyjs/leb128": "1.3.1",
+-        "@webassemblyjs/wasm-parser": "1.3.1",
+-        "webassemblyjs": "1.3.1"
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/helper-wasm-bytecode": "1.4.3",
++        "@webassemblyjs/leb128": "1.4.3",
++        "@webassemblyjs/wasm-parser": "1.4.3",
++        "webassemblyjs": "1.4.3"
+       }
+     },
+     "@webassemblyjs/wast-parser": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/wast-parser/-/wast-parser-1.3.1.tgz",
+-      "integrity": "sha512-lM7Kwsp1mqqL3jq1kXKeoT8Z/cXvPQ2kWBNg19nZXbL1eLgr+4qRi83WvQU45+5+uIovigtBw/WU0nLLev7LGA==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/wast-parser/-/wast-parser-1.4.3.tgz",
++      "integrity": "sha512-QhCsQzqV0CpsEkRYyTzQDilCNUZ+5j92f+g35bHHNqS22FppNTywNFfHPq8ZWZfYCgbectc+PoghD+xfzVFh1Q==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/floating-point-hex-parser": "1.3.1",
+-        "@webassemblyjs/helper-code-frame": "1.3.1",
+-        "@webassemblyjs/helper-fsm": "1.3.1",
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/floating-point-hex-parser": "1.4.3",
++        "@webassemblyjs/helper-code-frame": "1.4.3",
++        "@webassemblyjs/helper-fsm": "1.4.3",
+         "long": "3.2.0",
+-        "webassemblyjs": "1.3.1"
++        "webassemblyjs": "1.4.3"
+       }
+     },
+     "@webassemblyjs/wast-printer": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/@webassemblyjs/wast-printer/-/wast-printer-1.3.1.tgz",
+-      "integrity": "sha512-V2SMByzsrTT2wGQOjm/3ctCiy8mdYOSLDk+EkOpNHVZWB9ISJc+gZWzniTgihih03UWqqNa1S/0XpyVz7ZEYSQ==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/@webassemblyjs/wast-printer/-/wast-printer-1.4.3.tgz",
++      "integrity": "sha512-EgXk4anf8jKmuZJsqD8qy5bz2frEQhBvZruv+bqwNoLWUItjNSFygk8ywL3JTEz9KtxTlAmqTXNrdD1d9gNDtg==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/wast-parser": "1.3.1",
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/wast-parser": "1.4.3",
+         "long": "3.2.0"
+       }
+     },
+@@ -3232,9 +3277,9 @@
+       "dev": true
+     },
+     "antd": {
+-      "version": "3.4.4",
+-      "resolved": "https://registry.npmjs.org/antd/-/antd-3.4.4.tgz",
+-      "integrity": "sha512-DKlFG8ni3n2uaT4A16ihyUvqa5IK2g/xcac5KSYdtWeqexQ1MPyrFlkOCagSROcSNkLB13RoRe503qPd0bjKaA==",
++      "version": "3.5.2",
++      "resolved": "https://registry.npmjs.org/antd/-/antd-3.5.2.tgz",
++      "integrity": "sha512-suJ3QFjmBj4lhXUNCsjse4RIvseE6EIiiihgJB1xR0pr8novSrDZQj8ZK/4dOYBaJs2UJ5qJltRCVbO30fCuRA==",
+       "requires": {
+         "array-tree-filter": "2.1.0",
+         "babel-runtime": "6.26.0",
+@@ -3249,24 +3294,24 @@
+         "prop-types": "15.6.1",
+         "rc-animate": "2.4.4",
+         "rc-calendar": "9.6.0",
+-        "rc-cascader": "0.12.2",
++        "rc-cascader": "0.13.1",
+         "rc-checkbox": "2.1.5",
+-        "rc-collapse": "1.8.0",
++        "rc-collapse": "1.9.2",
+         "rc-dialog": "7.1.4",
+         "rc-dropdown": "2.1.2",
+         "rc-editor-mention": "1.1.6",
+         "rc-form": "2.2.0",
+-        "rc-input-number": "4.0.6",
+-        "rc-menu": "6.2.10",
+-        "rc-notification": "3.0.1",
++        "rc-input-number": "4.0.7",
++        "rc-menu": "7.0.3",
++        "rc-notification": "3.1.1",
+         "rc-pagination": "1.16.3",
+         "rc-progress": "2.2.5",
+         "rc-rate": "2.4.0",
+-        "rc-select": "7.7.8",
++        "rc-select": "8.0.8",
+         "rc-slider": "8.6.1",
+         "rc-steps": "3.1.1",
+         "rc-switch": "1.6.0",
+-        "rc-table": "6.1.10",
++        "rc-table": "6.1.12",
+         "rc-tabs": "9.2.5",
+         "rc-time-picker": "3.3.1",
+         "rc-tooltip": "3.7.2",
+@@ -3278,13 +3323,6 @@
+         "react-slick": "0.23.1",
+         "shallowequal": "1.0.2",
+         "warning": "3.0.0"
+-      },
+-      "dependencies": {
+-        "lodash": {
+-          "version": "4.17.10",
+-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-          "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+-        }
+       }
+     },
+     "any-observable": {
+@@ -3684,6 +3722,16 @@
+       "integrity": "sha512-32NDda82rhwD9/JBCCkB+MRYDp0oSvlo2IL6rQWA10PQi7tDUM3eqMSltXmY+Oyl/7N3P3qNtAlv7X0d9bI28w==",
+       "dev": true
+     },
++    "axios": {
++      "version": "0.18.0",
++      "resolved": "https://registry.npmjs.org/axios/-/axios-0.18.0.tgz",
++      "integrity": "sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=",
++      "dev": true,
++      "requires": {
++        "follow-redirects": "1.4.1",
++        "is-buffer": "1.1.6"
++      }
++    },
+     "azure-storage": {
+       "version": "0.10.0",
+       "resolved": "https://registry.npmjs.org/azure-storage/-/azure-storage-0.10.0.tgz",
+@@ -13754,8 +13802,7 @@
+     "lodash": {
+       "version": "4.17.10",
+       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-      "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg==",
+-      "dev": true
++      "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+     },
+     "lodash._baseassign": {
+       "version": "3.2.0",
+@@ -14748,9 +14795,9 @@
+       }
+     },
+     "mobx": {
+-      "version": "4.2.0",
+-      "resolved": "https://registry.npmjs.org/mobx/-/mobx-4.2.0.tgz",
+-      "integrity": "sha1-7gsKTz2i9HdiJQRqsgisMppIQdQ=",
++      "version": "4.2.1",
++      "resolved": "https://registry.npmjs.org/mobx/-/mobx-4.2.1.tgz",
++      "integrity": "sha1-3UGQ2vG0PUGjoihYUlP5lwsKJ90=",
+       "dev": true
+     },
+     "mobx-react": {
+@@ -14764,9 +14811,9 @@
+       }
+     },
+     "mobx-state-tree": {
+-      "version": "2.0.4",
+-      "resolved": "https://registry.npmjs.org/mobx-state-tree/-/mobx-state-tree-2.0.4.tgz",
+-      "integrity": "sha1-OqIJJdOZ9L0LYEnTpnJcjhN0UtQ=",
++      "version": "2.0.5",
++      "resolved": "https://registry.npmjs.org/mobx-state-tree/-/mobx-state-tree-2.0.5.tgz",
++      "integrity": "sha1-mRMbKnKcbq+d4WoS1Svxng7luh8=",
+       "dev": true
+     },
+     "mocha": {
+@@ -17455,18 +17502,18 @@
+         "create-react-class": "15.6.3",
+         "moment": "2.22.1",
+         "prop-types": "15.6.1",
+-        "rc-trigger": "2.3.4",
++        "rc-trigger": "2.4.1",
+         "rc-util": "4.5.0"
+       }
+     },
+     "rc-cascader": {
+-      "version": "0.12.2",
+-      "resolved": "https://registry.npmjs.org/rc-cascader/-/rc-cascader-0.12.2.tgz",
+-      "integrity": "sha512-Hq9bdEPGwQan65oLfuYojDwY3/PqZYxPFqsd38aYE8/x5shzMrBcA0UVZ9S4ds9g+T604cwAEIDJFYEePtGK3Q==",
++      "version": "0.13.1",
++      "resolved": "https://registry.npmjs.org/rc-cascader/-/rc-cascader-0.13.1.tgz",
++      "integrity": "sha512-gbv7eEm3WY2Zhnyb2cLnCz+Zd8s4H5DKPQWLN5J1gCZioprW8uj9X5RPaScizb6HAO03sYsue2YRB+nNI8DrYg==",
+       "requires": {
+         "array-tree-filter": "1.0.1",
+         "prop-types": "15.6.1",
+-        "rc-trigger": "2.3.4",
++        "rc-trigger": "2.4.1",
+         "rc-util": "4.5.0",
+         "shallow-equal": "1.0.0"
+       },
+@@ -17490,9 +17537,9 @@
+       }
+     },
+     "rc-collapse": {
+-      "version": "1.8.0",
+-      "resolved": "https://registry.npmjs.org/rc-collapse/-/rc-collapse-1.8.0.tgz",
+-      "integrity": "sha512-X5rWiZ6edMe1K/pnnniGzZirdBJIS7fIElIEnCStmHtD5Bj5F512KLX+YGjTrcUb9pgmdSUrBBaKhUzeMDOS2w==",
++      "version": "1.9.2",
++      "resolved": "https://registry.npmjs.org/rc-collapse/-/rc-collapse-1.9.2.tgz",
++      "integrity": "sha512-mdKU10GPops0jaPtYlTxoOVK6yDO8dDnqaXR8dQjZ6dcXrKZhD9cS10E4wZgtKCPBR3LMhLXNEMr9l82RLj94w==",
+       "requires": {
+         "classnames": "2.2.5",
+         "css-animation": "1.4.1",
+@@ -17517,7 +17564,7 @@
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "prop-types": "15.6.1",
+-        "rc-trigger": "2.3.4",
++        "rc-trigger": "2.4.1",
+         "react-lifecycles-compat": "3.0.2"
+       }
+     },
+@@ -17533,13 +17580,6 @@
+         "lodash": "4.17.10",
+         "prop-types": "15.6.1",
+         "setimmediate": "1.0.5"
+-      },
+-      "dependencies": {
+-        "lodash": {
+-          "version": "4.17.10",
+-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-          "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+-        }
+       }
+     },
+     "rc-editor-mention": {
+@@ -17568,13 +17608,6 @@
+         "hoist-non-react-statics": "2.5.0",
+         "lodash": "4.17.10",
+         "warning": "3.0.0"
+-      },
+-      "dependencies": {
+-        "lodash": {
+-          "version": "4.17.10",
+-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-          "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+-        }
+       }
+     },
+     "rc-hammerjs": {
+@@ -17588,37 +17621,36 @@
+       }
+     },
+     "rc-input-number": {
+-      "version": "4.0.6",
+-      "resolved": "https://registry.npmjs.org/rc-input-number/-/rc-input-number-4.0.6.tgz",
+-      "integrity": "sha512-sWFDWBNHFqhIqeWs647AGYMdPPcWM4hpqjz1qQv1qE9GLPOUcmI6gAKU+J3eFWB4tFoi1+KOtOvFwJfyM5bJOg==",
++      "version": "4.0.7",
++      "resolved": "https://registry.npmjs.org/rc-input-number/-/rc-input-number-4.0.7.tgz",
++      "integrity": "sha512-iij0JPOZMHGJMq9nwpVk8/rgTcbMy++9ePChZF6vYH7JO5rHtLohHy5GGWY2HjhNai+EB8/46USFhKKCq0TzPQ==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "classnames": "2.2.5",
+         "is-negative-zero": "2.0.0",
+         "prop-types": "15.6.1",
+-        "rmc-feedback": "1.0.4"
++        "rmc-feedback": "2.0.0"
+       }
+     },
+     "rc-menu": {
+-      "version": "6.2.10",
+-      "resolved": "https://registry.npmjs.org/rc-menu/-/rc-menu-6.2.10.tgz",
+-      "integrity": "sha512-Rc4a7oIbme3o8LeMcbewUZ4ItDnEqg1eh6ZbNh7IsAqGUpNE9pxfLf/aJa0QXmg8JPKH3aiqH1nGrmvZR5P68w==",
++      "version": "7.0.3",
++      "resolved": "https://registry.npmjs.org/rc-menu/-/rc-menu-7.0.3.tgz",
++      "integrity": "sha512-QtcTb4CG1skgEghvTbR0g4pVH+q3LlkBGOMYXLmke/ck64UuYlt2AnEqFsR1vyAov67Fkoic4jwudqGdiYGM0Q==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "classnames": "2.2.5",
+-        "create-react-class": "15.6.3",
+         "dom-scroll-into-view": "1.2.1",
+         "mini-store": "1.1.0",
+         "prop-types": "15.6.1",
+         "rc-animate": "2.4.4",
+-        "rc-trigger": "2.3.4",
++        "rc-trigger": "2.4.1",
+         "rc-util": "4.5.0"
+       }
+     },
+     "rc-notification": {
+-      "version": "3.0.1",
+-      "resolved": "https://registry.npmjs.org/rc-notification/-/rc-notification-3.0.1.tgz",
+-      "integrity": "sha512-DvnTJKh4V8i8JWe448Nymrb0D+r98Rg8sSdeZbZJJ+juHZUV8uWWAEZwQRemC0I+4J/xNQTBpEFcPgvd+darHg==",
++      "version": "3.1.1",
++      "resolved": "https://registry.npmjs.org/rc-notification/-/rc-notification-3.1.1.tgz",
++      "integrity": "sha512-70a/qR3SRnYr728H0viEyv8QtLjWzUb3kTZV96yqU/Ro5jWSF/Q3qK7dRGEuyfqjWyGVEuTCyiKNu/qAp26m9g==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "classnames": "2.2.5",
+@@ -17657,9 +17689,9 @@
+       }
+     },
+     "rc-select": {
+-      "version": "7.7.8",
+-      "resolved": "https://registry.npmjs.org/rc-select/-/rc-select-7.7.8.tgz",
+-      "integrity": "sha512-lu0J3+EElTyMDrgXvs0M1M015KRZEZu/M7k15Kq8scFZ7g4KLTO0cKZfA0GNug2ARj3atrTrSbEAxsy8hMoX7A==",
++      "version": "8.0.8",
++      "resolved": "https://registry.npmjs.org/rc-select/-/rc-select-8.0.8.tgz",
++      "integrity": "sha512-ziwO5Z/CBW84FUGnErYbxva17NwCpV8gMoogab59MvOp+lz00vEAkOgJSXlOZzM+Q9H6wtQbS82Vhqhf33nXBg==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "classnames": "2.2.5",
+@@ -17667,9 +17699,10 @@
+         "dom-scroll-into-view": "1.2.1",
+         "prop-types": "15.6.1",
+         "rc-animate": "2.4.4",
+-        "rc-menu": "6.2.10",
+-        "rc-trigger": "2.3.4",
++        "rc-menu": "7.0.3",
++        "rc-trigger": "2.4.1",
+         "rc-util": "4.5.0",
++        "react-lifecycles-compat": "3.0.2",
+         "warning": "3.0.0"
+       }
+     },
+@@ -17696,13 +17729,6 @@
+         "classnames": "2.2.5",
+         "lodash": "4.17.10",
+         "prop-types": "15.6.1"
+-      },
+-      "dependencies": {
+-        "lodash": {
+-          "version": "4.17.10",
+-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-          "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+-        }
+       }
+     },
+     "rc-switch": {
+@@ -17716,9 +17742,9 @@
+       }
+     },
+     "rc-table": {
+-      "version": "6.1.10",
+-      "resolved": "https://registry.npmjs.org/rc-table/-/rc-table-6.1.10.tgz",
+-      "integrity": "sha512-hDq1j7NLs9E8TK4nWIThp9SwIZe2yewdmmOw9Jt0DDsj/Hw2apaKVQL14vfWKIHVsBmFgMU8WQMk4MI6kmCj2A==",
++      "version": "6.1.12",
++      "resolved": "https://registry.npmjs.org/rc-table/-/rc-table-6.1.12.tgz",
++      "integrity": "sha512-cRdURLsbv2KAvpCvpJ935jHMyvA/vzs13EvlAq6Ti6Ars/isp2nxLlvldzum8V5XHe9yV6g4GMhkCXwZnEyxpg==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "component-classes": "1.2.6",
+@@ -17729,13 +17755,6 @@
+         "react-lifecycles-compat": "3.0.2",
+         "shallowequal": "1.0.2",
+         "warning": "3.0.0"
+-      },
+-      "dependencies": {
+-        "lodash": {
+-          "version": "4.17.10",
+-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-          "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+-        }
+       }
+     },
+     "rc-tabs": {
+@@ -17751,13 +17770,6 @@
+         "rc-hammerjs": "0.6.9",
+         "rc-util": "4.5.0",
+         "warning": "3.0.0"
+-      },
+-      "dependencies": {
+-        "lodash": {
+-          "version": "4.17.10",
+-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
+-          "integrity": "sha512-UejweD1pDoXu+AD825lWwp4ZGtSwgnpZxb3JDViD7StjQz+Nb/6l093lx4OQ0foGWNRoc19mWy7BzL+UAK2iVg=="
+-        }
+       }
+     },
+     "rc-time-picker": {
+@@ -17769,7 +17781,7 @@
+         "classnames": "2.2.5",
+         "moment": "2.22.1",
+         "prop-types": "15.6.1",
+-        "rc-trigger": "2.3.4"
++        "rc-trigger": "2.4.1"
+       }
+     },
+     "rc-tooltip": {
+@@ -17779,7 +17791,7 @@
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "prop-types": "15.6.1",
+-        "rc-trigger": "2.3.4"
++        "rc-trigger": "2.4.1"
+       }
+     },
+     "rc-tree": {
+@@ -17805,7 +17817,7 @@
+         "prop-types": "15.6.1",
+         "rc-animate": "2.4.4",
+         "rc-tree": "1.7.11",
+-        "rc-trigger": "2.3.4",
++        "rc-trigger": "2.4.1",
+         "rc-util": "4.5.0"
+       },
+       "dependencies": {
+@@ -17825,9 +17837,9 @@
+       }
+     },
+     "rc-trigger": {
+-      "version": "2.3.4",
+-      "resolved": "https://registry.npmjs.org/rc-trigger/-/rc-trigger-2.3.4.tgz",
+-      "integrity": "sha512-xPhda3SfGWHywEbVJu2VxpWg99ELStzNPcdnxb7lZ9XwUnHjUeX9KCaIbJa9GUuoVHx3mQP1s2m3ttIB8aashQ==",
++      "version": "2.4.1",
++      "resolved": "https://registry.npmjs.org/rc-trigger/-/rc-trigger-2.4.1.tgz",
++      "integrity": "sha512-rHElLE96runJg1eBnFgC9yEBNHrFlHRKnE23P1MYNMBavVbt8a/wDSX2NZUR9yhRghtarAoP1CfLSJyv7cgsZQ==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "prop-types": "15.6.1",
+@@ -18517,9 +18529,9 @@
+       }
+     },
+     "rmc-feedback": {
+-      "version": "1.0.4",
+-      "resolved": "https://registry.npmjs.org/rmc-feedback/-/rmc-feedback-1.0.4.tgz",
+-      "integrity": "sha512-cRrywsfsQlw92Uz7qKzBxtyO1w0GWcP5yy/S8sec/6mIUdCn86olQuhBMHxpIpHGcEIJ+J9lBjl3DOrBD0Plrw==",
++      "version": "2.0.0",
++      "resolved": "https://registry.npmjs.org/rmc-feedback/-/rmc-feedback-2.0.0.tgz",
++      "integrity": "sha512-5PWOGOW7VXks/l3JzlOU9NIxRpuaSS8d9zA3UULUCuTKnpwBHNvv1jSJzxgbbCQeYzROWUpgKI4za3X4C/mKmQ==",
+       "requires": {
+         "babel-runtime": "6.26.0",
+         "classnames": "2.2.5"
+@@ -19408,9 +19420,9 @@
+       "integrity": "sha1-PpNdfd1zYxuXZZlW1VEo6HtQhKM="
+     },
+     "sp-pnp-js": {
+-      "version": "3.0.7",
+-      "resolved": "https://registry.npmjs.org/sp-pnp-js/-/sp-pnp-js-3.0.7.tgz",
+-      "integrity": "sha1-lOv/U9u9CXRmDtbmthazDMtEkFY=",
++      "version": "3.0.8",
++      "resolved": "https://registry.npmjs.org/sp-pnp-js/-/sp-pnp-js-3.0.8.tgz",
++      "integrity": "sha1-DSVo1eBbkDjYkAQQ4lD0r8JaXD8=",
+       "requires": {
+         "@microsoft/microsoft-graph-types": "1.1.0",
+         "@types/sharepoint": "2013.1.9"
+@@ -21689,14 +21701,14 @@
+       }
+     },
+     "webassemblyjs": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/webassemblyjs/-/webassemblyjs-1.3.1.tgz",
+-      "integrity": "sha512-jaqGpR+MLye6fzxKTiv0/TPEm6ma7ypef76JlQVk9E1z5M2N6EXNrsMOuh7P6aXUVFHJSioRp4N9QOFpcWfIVA==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/webassemblyjs/-/webassemblyjs-1.4.3.tgz",
++      "integrity": "sha512-4lOV1Lv6olz0PJkDGQEp82HempAn147e6BXijWDzz9g7/2nSebVP9GVg62Fz5ZAs55mxq13GA0XLyvY8XkyDjg==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/validation": "1.3.1",
+-        "@webassemblyjs/wasm-parser": "1.3.1",
+-        "@webassemblyjs/wast-parser": "1.3.1",
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/validation": "1.4.3",
++        "@webassemblyjs/wasm-parser": "1.4.3",
++        "@webassemblyjs/wast-parser": "1.4.3",
+         "long": "3.2.0"
+       }
+     },
+@@ -21706,13 +21718,13 @@
+       "integrity": "sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE="
+     },
+     "webpack": {
+-      "version": "4.8.1",
+-      "resolved": "https://registry.npmjs.org/webpack/-/webpack-4.8.1.tgz",
+-      "integrity": "sha512-xkxthzaVR298HmvmrjBCjiCmgzWnBnvBlgPzuvqmxWSh8QImrPvCCmr482YIx7ixWkTtQj1aMRz+cjoNPUsGEQ==",
++      "version": "4.8.3",
++      "resolved": "https://registry.npmjs.org/webpack/-/webpack-4.8.3.tgz",
++      "integrity": "sha512-/hfAjBISycdK597lxONjKEFX7dSIU1PsYwC3XlXUXoykWBlv9QV5HnO+ql3HvrrgfBJ7WXdnjO9iGPR2aAc5sw==",
+       "requires": {
+-        "@webassemblyjs/ast": "1.3.1",
+-        "@webassemblyjs/wasm-edit": "1.3.1",
+-        "@webassemblyjs/wasm-parser": "1.3.1",
++        "@webassemblyjs/ast": "1.4.3",
++        "@webassemblyjs/wasm-edit": "1.4.3",
++        "@webassemblyjs/wasm-parser": "1.4.3",
+         "acorn": "5.5.3",
+         "acorn-dynamic-import": "3.0.0",
+         "ajv": "6.5.0",
+Index: src/stores/TalentsStore.ts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {applySnapshot, flow, getParent, types} from \"mobx-state-tree\";\nimport {DataProviderFactory} from \"./Common/DataProviderFactory\";\n\n\nexport const Talent = types.model({\n  Id: types.maybe(types.number),\n  EmployeeId: types.optional(types.string, \"\"),\n  Name: types.optional(types.string, \"\"),\n  Manager: types.optional(types.string, \"\"),\n  AreaHead: types.optional(types.string, \"\"),\n  Division: types.optional(types.string, \"\"),\n  Unit: types.optional(types.string, \"\"),\n  Stream: types.optional(types.string, \"\"),\n  Function: types.optional(types.string, \"\"),\n  Location: types.optional(types.string, \"\"),\n  Grade: types.optional(types.string, \"\"),\n  BusinessRisk: types.optional(types.string, \"\"),\n  FlightRisk: types.optional(types.string, \"\"),\n  Performance: types.optional(types.string, \"\"),\n  Potential: types.optional(types.string, \"\"),\n  Movement: types.optional(types.string, \"\"),\n  Requirements_01_category: types.optional(types.string, \"\"),\n  Requirements_01_subcategory: types.optional(types.string, \"\"),\n  Requirements_02_category: types.optional(types.string, \"\"),\n  Requirements_02_subcategory: types.optional(types.string, \"\"),\n  Notes: types.optional(types.string, \"\")\n})\n  .named(\"TalentRecord\")\n  .actions(self => {\n    const changeEmployeeId = (id: string) => {\n      self.EmployeeId = id;\n    }\n\n    const SetValueIfDifferent = (oldValue: string, newValue: string) => {\n      if (oldValue != newValue)\n        oldValue = newValue;\n    }\n\n    //Todo : think about the Person data . Do we need to include userId, Email and displayName\n    const changeBusinessUnit = (businessUnit: string[]) => {\n      const [division, stream, unit, location] = businessUnit;\n\n\n      self.Division = division;\n      self.Stream = stream;\n      self.Unit = unit;\n      self.Location = location;\n    }\n\n    const changeFunction = (newFunction: string) => {\n      self.Function = newFunction;\n      //SetValueIfDifferent(self.BusinessFunction, newFunction)\n    }\n\n    const changeGrade = (newGrade: string) => {\n      SetValueIfDifferent(self.Grade, newGrade);\n    }\n\n    const changeBusinessRisk = (newBusinessRisk: string) => {\n      SetValueIfDifferent(self.BusinessRisk, newBusinessRisk);\n    }\n\n    const changeFlightRisk = (newFlightRisk: string) => {\n      SetValueIfDifferent(self.FlightRisk, newFlightRisk);\n    }\n\n\n    return {\n      changeBusinessUnit,\n      changeFunction,\n      changeGrade,\n      changeBusinessRisk,\n      changeFlightRisk\n    }\n  })\n  .views(self => ({\n\n    get BusinessUnits() {\n      console.log(\"BusinessUnits: called\");\n      const {Division, Unit, Stream, Location} = self;\n      const result = [Division, Unit, Stream, Location];\n      console.log(result)\n      return result;\n    },\n    get DevelopmentRequirement01() {\n      const {Requirements_01_category, Requirements_01_subcategory} = self;\n      return [Requirements_01_category, Requirements_01_subcategory];\n    },\n    get DevelopmentRequirement02() {\n      const {Requirements_02_category, Requirements_02_subcategory} = self;\n      return [Requirements_02_category, Requirements_02_subcategory];\n    }\n  }));\n\n\nconst TalentsStore = types.model({\n  items: types.optional(types.array(Talent), []),\n  isLoading: types.optional(types.boolean, false)\n}).actions(\n  self => {\n\n    const _dataProvider = DataProviderFactory.GetTalentsDataProvider();\n    const LoadAllTalents = flow(function* LoadAllTalents() {\n\n      try {\n        const response = yield _dataProvider.GetAll();\n        if (response) {\n          console.log(\"Talents : \" + JSON.stringify(response, null, 4));\n          applySnapshot(self.items, response);\n        }\n      }\n      catch (error) {\n        console.log(\"Error retrieving Talents\" + error);\n        throw new Error(error.message);\n      }\n      finally {\n        self.isLoading = false;\n      }\n\n    })\n    const GetTalentById = flow(function* GetTalentById(id: number) {\n\n      let talent;\n      try {\n        const response = yield _dataProvider.GetTalentById(id);\n        if (response) {\n\n          //Todo : ugly piece of code that needs to be refactored.\n          console.log(\"Talents : \" + JSON.stringify(response, null, 4));\n          talent = Talent.create(response);\n          applySnapshot(getParent(self, 1).Talent, talent);\n          //Todo: move this code for the AppStore\\ViewStore\n          /* if (getParent(self, 1).Talent)\n            applySnapshot(getParent(self, 1).Talent, talent);\n          else\n            getParent(self, 1).SetTalent(talent);*/\n          console.log(\"Talent Record : \" + JSON.stringify(talent, null, 4));\n        }\n      }\n      catch (error) {\n        console.log(\"Error retrieving Talents\" + error);\n        throw new Error(error.message);\n      }\n      finally {\n        self.isLoading = false;\n        return talent\n      }\n\n    })\n    return {LoadAllTalents, GetTalentById}\n  }\n).actions(self => {\n  const afterCreate = () => {\n    console.log(\"Loading relevant Talent Records\")\n    self.LoadAllTalents().then(_ => console.log(\"Number of Loaded Talent Records :\" + self.items.length));\n  }\n\n  return {\n    afterCreate\n  }\n})\n\n\nexport default TalentsStore;\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/stores/TalentsStore.ts	(date 1526454522000)
++++ src/stores/TalentsStore.ts	(date 1526477384701)
+@@ -1,5 +1,6 @@
+ import {applySnapshot, flow, getParent, types} from "mobx-state-tree";
+ import {DataProviderFactory} from "./Common/DataProviderFactory";
++import axios from 'axios';
+ 
+ 
+ export const Talent = types.model({
+@@ -118,6 +119,35 @@
+       }
+ 
+     })
++
++    const SaveTalentRecord = ()=>{
++axios.post('http://kiertalentportalwebapi1505.azurewebsites.net/api/talents', {
++  Id: 1,
++  EmployeeId: 'MK0000000',
++  Name: 'khalil, Abdalla',
++  Manager: 'Jones,Brian',
++  Function: 'Finance',
++  AreaHead: 'Ahmed, Mohamed',
++  Division: 'DP&BS',
++  //Division: undefined,
++  Unit: 'Enviromental',
++  Stream: 'Environmental Central',
++  Location: 'Environmental Central - Corby Borough Council',
++  BusinessRisk: 'High',
++  FlightRisk: 'Low',
++  Performance: '2',
++  Potential: 'B',
++  Grade: 'L2',
++  Movement: 'Soon',
++  Requirements_01_category: 'Technical Training',
++  Requirements_01_subcategory: 'Option 2',
++  Requirements_02_category: 'Technical Training',
++  Requirements_02_subcategory: 'Option 3',
++  Notes: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed fermentum ex, sit amet congue eros. Ut cursus mattis feugiat. Aenean tristique ante in urna lobortis, sit amet luctus nulla dapibus. Etiam sodales, odio et faucibus placerat, libero ligula lobortis augue, quis malesuada sem enim in erat. Donec eu lorem sit amet nulla congue porta ut vitae dui. Fusce dignissim ullamcorper lorem eu sagittis. Ut mollis purus vel nibh mollis dignissim.'
++}).then(_=>console.log("New Record Operation is done"))
++  .catch(error=>console.log(JSON.stringify(error,null,4)))
++    }
++
+     const GetTalentById = flow(function* GetTalentById(id: number) {
+ 
+       let talent;
+@@ -147,7 +177,7 @@
+       }
+ 
+     })
+-    return {LoadAllTalents, GetTalentById}
++    return {LoadAllTalents, GetTalentById,SaveTalentRecord}
+   }
+ ).actions(self => {
+   const afterCreate = () => {
+Index: ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Controllers/TalentsController.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\nusing System.Collections.Generic;\nusing System.Configuration;\nusing System.Web.Http;\nusing Kier.TalentPortal.WebAPI.Models;\nusing Microsoft.SharePoint.Client;\nusing OfficeDevPnP.Core;\nusing Swashbuckle.Swagger.Annotations;\n\nnamespace Kier.TalentPortal.WebAPI.Controllers\n{\n    public class TalentsController : ApiController\n    {\n        public IHttpActionResult Get(int id)\n        {\n            AuthenticationManager authMgr = new AuthenticationManager();\n            using (ClientContext ctx = authMgr.GetAppOnlyAuthenticatedContext(\n                ConfigurationManager.AppSettings[\"siteUrl\"],\n                ConfigurationManager.AppSettings[\"clientId\"],\n                ConfigurationManager.AppSettings[\"clientSecret\"]))\n            {\n                var list = ctx.Web.Lists.GetByTitle(ConfigurationManager.AppSettings[\"listName\"]);\n                //var item = list.AddItem(new ListItemCreationInformation());\n                //item[\"Title\"] = DateTime.Now.ToLongTimeString();\n                //item.Update();\n                var listItem = list.GetItemById(1);\n                \n                ctx.Load(listItem);\n                ctx.ExecuteQuery();\n                var x = listItem[\"Title\"];\n            }\n                var talent = new Talent();\n            return Ok(talent);\n        }\n\n        [HttpPost]\n        public IHttpActionResult NewTalentRecord([FromBody]Talent talent)\n        {\n            var x = talent;\n            AuthenticationManager authMgr = new AuthenticationManager();\n            using (ClientContext ctx = authMgr.GetAppOnlyAuthenticatedContext(\n                ConfigurationManager.AppSettings[\"siteUrl\"],\n                ConfigurationManager.AppSettings[\"clientId\"],\n                ConfigurationManager.AppSettings[\"clientSecret\"]))\n            {\n                var list = ctx.Web.Lists.GetByTitle(ConfigurationManager.AppSettings[\"listName\"]);\n                ListItemCreationInformation itemCreateInfo = new ListItemCreationInformation();\n                ListItem newItem = list.AddItem(itemCreateInfo);\n                newItem[Constants.Talent_Record_Division] = talent.Division;\n                newItem[Constants.Talent_Record_Business_Stream] = talent.Stream;\n                newItem[Constants.Talent_Record_Business_Unit] = talent.Unit;\n                newItem[Constants.Talent_Record_Area_Head] = talent.AreaHead;\n                newItem[Constants.Talent_Record_Business_Risk] = talent.BusinessRisk;\n                newItem[Constants.Talent_Record_Development_Notes] = talent.Notes;\n                newItem[Constants.Talent_Record_Employee_Id] = talent.EmployeeId;\n                newItem[Constants.Talent_Record_Flight_Risk] = talent.FlightRisk;\n                newItem[Constants.Talent_Record_Function] = talent.Function;\n                newItem[Constants.Talent_Record_Grade] = talent.Grade;\n                newItem[Constants.Talent_Record_Location] = talent.Location;\n                newItem[Constants.Talent_Record_Movement] = talent.Movement;\n                newItem[Constants.Talent_Record_Performance] = talent.Performance;\n                newItem[Constants.Talent_Record_Potential] = talent.Potential;\n\n                newItem.Update();\n                ctx.ExecuteQuery();\n            }\n\n            return Ok(talent);\n        }\n\n        [HttpPut]\n        public IHttpActionResult UpdateTalentRecord([FromBody]Talent talent)\n        {\n         \n            AuthenticationManager authMgr = new AuthenticationManager();\n            using (ClientContext ctx = authMgr.GetAppOnlyAuthenticatedContext(\n                ConfigurationManager.AppSettings[\"siteUrl\"],\n                ConfigurationManager.AppSettings[\"clientId\"],\n                ConfigurationManager.AppSettings[\"clientSecret\"]))\n            {\n                \n                var list = ctx.Web.Lists.GetByTitle(ConfigurationManager.AppSettings[\"listName\"]);\n                ListItemCreationInformation itemCreateInfo = new ListItemCreationInformation();\n                ListItem newItem = list.AddItem(itemCreateInfo);\n                newItem[Constants.Talent_Record_Division] = talent.Division;\n                newItem[Constants.Talent_Record_Business_Stream] = talent.Stream;\n                newItem[Constants.Talent_Record_Business_Unit] = talent.Unit;\n                newItem[Constants.Talent_Record_Area_Head] = talent.AreaHead;\n                newItem[Constants.Talent_Record_Business_Risk] = talent.BusinessRisk;\n                newItem[Constants.Talent_Record_Development_Notes] = talent.Notes;\n                newItem[Constants.Talent_Record_Employee_Id] = talent.EmployeeId;\n                newItem[Constants.Talent_Record_Flight_Risk] = talent.FlightRisk;\n                newItem[Constants.Talent_Record_Function] = talent.Function;\n                newItem[Constants.Talent_Record_Grade] = talent.Grade;\n                newItem[Constants.Talent_Record_Location] = talent.Location;\n                newItem[Constants.Talent_Record_Movement] = talent.Movement;\n                newItem[Constants.Talent_Record_Performance] = talent.Performance;\n                newItem[Constants.Talent_Record_Potential] = talent.Potential;\n\n                newItem.Update();\n                ctx.ExecuteQuery();\n            }\n\n            return Ok(talent);\n        }\n\n\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Controllers/TalentsController.cs	(date 1526454522000)
++++ ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Controllers/TalentsController.cs	(date 1526475343195)
+@@ -1,44 +1,46 @@
+-using System;
+-using System.Collections.Generic;
+ using System.Configuration;
++using System.Linq;
+ using System.Web.Http;
+ using Kier.TalentPortal.WebAPI.Models;
+ using Microsoft.SharePoint.Client;
+ using OfficeDevPnP.Core;
+-using Swashbuckle.Swagger.Annotations;
+ 
+ namespace Kier.TalentPortal.WebAPI.Controllers
+ {
+     public class TalentsController : ApiController
+     {
+-        public IHttpActionResult Get(int id)
++        [HttpGet]
++        public IHttpActionResult GetTalent(int id)
+         {
+-            AuthenticationManager authMgr = new AuthenticationManager();
+-            using (ClientContext ctx = authMgr.GetAppOnlyAuthenticatedContext(
++            Talent talent = default(Talent);
++            var authMgr = new AuthenticationManager();
++            using (var ctx = authMgr.GetAppOnlyAuthenticatedContext(
+                 ConfigurationManager.AppSettings["siteUrl"],
+                 ConfigurationManager.AppSettings["clientId"],
+                 ConfigurationManager.AppSettings["clientSecret"]))
+             {
+                 var list = ctx.Web.Lists.GetByTitle(ConfigurationManager.AppSettings["listName"]);
+-                //var item = list.AddItem(new ListItemCreationInformation());
+-                //item["Title"] = DateTime.Now.ToLongTimeString();
+-                //item.Update();
+-                var listItem = list.GetItemById(1);
+-                
+-                ctx.Load(listItem);
++                var query = new CamlQuery();
++                query.ViewXml = Constants.Get_Talent_Record_By_EmployeeId_Query;
++                var result = list.GetItems(query);
++                ctx.Load(result);
+                 ctx.ExecuteQuery();
+-                var x = listItem["Title"];
++                if (result.ToList().Count >= 2)
++                {
++                   talent = Talent.FromSPListItem(result[0]);
++                   talent.PreviousYear = Talent.FromSPListItem(result[1]);
++                }
+             }
+-                var talent = new Talent();
++
+             return Ok(talent);
+         }
+ 
+         [HttpPost]
+-        public IHttpActionResult NewTalentRecord([FromBody]Talent talent)
++        public IHttpActionResult NewTalentRecord([FromBody] Talent talent)
+         {
+             var x = talent;
+-            AuthenticationManager authMgr = new AuthenticationManager();
+-            using (ClientContext ctx = authMgr.GetAppOnlyAuthenticatedContext(
++            var authMgr = new AuthenticationManager();
++            using (var ctx = authMgr.GetAppOnlyAuthenticatedContext(
+                 ConfigurationManager.AppSettings["siteUrl"],
+                 ConfigurationManager.AppSettings["clientId"],
+                 ConfigurationManager.AppSettings["clientSecret"]))
+@@ -46,21 +48,7 @@
+                 var list = ctx.Web.Lists.GetByTitle(ConfigurationManager.AppSettings["listName"]);
+                 ListItemCreationInformation itemCreateInfo = new ListItemCreationInformation();
+                 ListItem newItem = list.AddItem(itemCreateInfo);
+-                newItem[Constants.Talent_Record_Division] = talent.Division;
+-                newItem[Constants.Talent_Record_Business_Stream] = talent.Stream;
+-                newItem[Constants.Talent_Record_Business_Unit] = talent.Unit;
+-                newItem[Constants.Talent_Record_Area_Head] = talent.AreaHead;
+-                newItem[Constants.Talent_Record_Business_Risk] = talent.BusinessRisk;
+-                newItem[Constants.Talent_Record_Development_Notes] = talent.Notes;
+-                newItem[Constants.Talent_Record_Employee_Id] = talent.EmployeeId;
+-                newItem[Constants.Talent_Record_Flight_Risk] = talent.FlightRisk;
+-                newItem[Constants.Talent_Record_Function] = talent.Function;
+-                newItem[Constants.Talent_Record_Grade] = talent.Grade;
+-                newItem[Constants.Talent_Record_Location] = talent.Location;
+-                newItem[Constants.Talent_Record_Movement] = talent.Movement;
+-                newItem[Constants.Talent_Record_Performance] = talent.Performance;
+-                newItem[Constants.Talent_Record_Potential] = talent.Potential;
+-
++                newItem = Talent.ToSPListItem(talent, newItem);
+                 newItem.Update();
+                 ctx.ExecuteQuery();
+             }
+@@ -69,42 +57,24 @@
+         }
+ 
+         [HttpPut]
+-        public IHttpActionResult UpdateTalentRecord([FromBody]Talent talent)
++        public IHttpActionResult UpdateTalentRecord([FromBody] Talent talent)
+         {
+-         
+-            AuthenticationManager authMgr = new AuthenticationManager();
+-            using (ClientContext ctx = authMgr.GetAppOnlyAuthenticatedContext(
++            var authMgr = new AuthenticationManager();
++            using (var ctx = authMgr.GetAppOnlyAuthenticatedContext(
+                 ConfigurationManager.AppSettings["siteUrl"],
+                 ConfigurationManager.AppSettings["clientId"],
+                 ConfigurationManager.AppSettings["clientSecret"]))
+             {
+-                
+                 var list = ctx.Web.Lists.GetByTitle(ConfigurationManager.AppSettings["listName"]);
+-                ListItemCreationInformation itemCreateInfo = new ListItemCreationInformation();
+-                ListItem newItem = list.AddItem(itemCreateInfo);
+-                newItem[Constants.Talent_Record_Division] = talent.Division;
+-                newItem[Constants.Talent_Record_Business_Stream] = talent.Stream;
+-                newItem[Constants.Talent_Record_Business_Unit] = talent.Unit;
+-                newItem[Constants.Talent_Record_Area_Head] = talent.AreaHead;
+-                newItem[Constants.Talent_Record_Business_Risk] = talent.BusinessRisk;
+-                newItem[Constants.Talent_Record_Development_Notes] = talent.Notes;
+-                newItem[Constants.Talent_Record_Employee_Id] = talent.EmployeeId;
+-                newItem[Constants.Talent_Record_Flight_Risk] = talent.FlightRisk;
+-                newItem[Constants.Talent_Record_Function] = talent.Function;
+-                newItem[Constants.Talent_Record_Grade] = talent.Grade;
+-                newItem[Constants.Talent_Record_Location] = talent.Location;
+-                newItem[Constants.Talent_Record_Movement] = talent.Movement;
+-                newItem[Constants.Talent_Record_Performance] = talent.Performance;
+-                newItem[Constants.Talent_Record_Potential] = talent.Potential;
++                var item = list.GetItemById(talent.Id);
++                ctx.ExecuteQuery();
+ 
+-                newItem.Update();
++                item = Talent.ToSPListItem(talent, item);
++                item.Update();
+                 ctx.ExecuteQuery();
+             }
+ 
+-            return Ok(talent);
++            return Ok();
+         }
+-
+-
+-
+     }
+-}
++}
+\ No newline at end of file
+Index: ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Constants.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Web;\n\nnamespace Kier.TalentPortal.WebAPI\n{\n    public class Constants\n    {\n        public const string Talent_Record_Area_Head = \"KTPAreaHead\";\n        public const string Talent_Record_Business_Risk = \"KTPBusinessRisk\";\n        public const string Talent_Record_Business_Stream = \"KTPBusinessStream\";\n        public const string Talent_Record_Business_Unit = \"KTPBusinessUnit\";\n        public const string Talent_Record_Is_Current_Submission = \"KTPCurrentSubmission\";\n        public const string Talent_Record_Development_Notes = \"KTPDevelopmentNotes\";\n        public const string Talent_Record_Division = \"KTPDivision\";\n        public const string Talent_Record_Employee_Id = \"KTPEmployeeID\";\n        public const string Talent_Record_First_Development_Requirement = \"KTPFirstDevelopmentRequirement\";\n        public const string Talent_Record_Flight_Risk = \"KTPFlightRisk\";\n        public const string Talent_Record_Function = \"KTPFunction\";\n        public const string Talent_Record_Grade = \"KTPGrade\";\n        public const string Talent_Record_Location = \"KTPLocation\";\n        public const string Talent_Record_Movement = \"KTPMovementStatus\";\n        public const string Talent_Record_Performance = \"KTPPerformanceRating\";\n        public const string Talent_Record_Position = \"KTPPosition\";\n        public const string Talent_Record_Potential = \"KTPPotentialRating\";\n        public const string Talent_Record_Second_Development_Requirement = \"KTPSecondDevelopmentRequirement\";\n        public const string Talent_Record_Submission_Year = \"KTPSubmissionYear\";\n\n\n\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Constants.cs	(date 1526454522000)
++++ ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Constants.cs	(date 1526465915445)
+@@ -26,6 +26,7 @@
+         public const string Talent_Record_Potential = "KTPPotentialRating";
+         public const string Talent_Record_Second_Development_Requirement = "KTPSecondDevelopmentRequirement";
+         public const string Talent_Record_Submission_Year = "KTPSubmissionYear";
++        public const string Get_Talent_Record_By_EmployeeId_Query = @"<Where><Eq><FieldRef Name=""KTPEmployeeID""/><Value Type = ""Text"" >K11312</Value></Eq></Where><OrderBy><FieldRef Name=""KTPSubmissionYear"" Ascending=""False"" /></OrderBy>";
+ 
+ 
+ 
+Index: src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import * as React from 'react';\nimport {ITalentRecordEditorProps} from './ITalentRecordEditorProps';\nimport {escape} from '@microsoft/sp-lodash-subset';\nimport {Form, Icon, Input, Button, Layout, Divider, Select, Row, Col, Cascader, Tooltip} from 'antd';\nimport {FormProps} from \"antd/lib/form/Form\";\nimport {FormComponentProps} from 'antd/lib/form/Form';\nimport CascadeSelector from './controls/CascadeSelector';\nimport Selector from './controls/Selector';\nimport NewHireSwitch from \"./controls/NewHireSwitch\";\nimport SliderSelector from \"./controls/SliderSelector\";\nimport UserRemoteSelect from \"./controls/UserSelector\";\nimport OptionsSelector from \"./controls/OptionsSelector\";\nimport {IDigestCache, DigestCache} from '@microsoft/sp-http';\n\n;\nimport {inject, observer} from \"mobx-react\";\nimport {Talent} from \"../../../../stores/TalentsStore\";\n\nconst FormItem = Form.Item;\nconst {Header, Content, Footer, Sider} = Layout;\n\nfunction hasErrors(fieldsError) {\n  return Object.keys(fieldsError).some(field => fieldsError[field]);\n}\n\n@inject(\"store\", \"context\")\n@observer\nclass TalentRecordEditor extends React.Component<any, any> {\n\n  constructor() {\n    super();\n    this.state = {\n      formLayout: 'vertical',\n    };\n  }\n\n  handleSubmit = (e) => {\n    console.log(\"Form Submitted\")\n  }\n\n\n\n  formatPerformanceTip = (value) => {\n    //Todo : refactor to make it more intelligent\n    if (value == 0)\n      return 1;\n    if (value == 25)\n      return 2;\n    if (value == 50)\n      return 3;\n    if (value == 75)\n      return 4;\n    if (value == 100)\n      return 5;\n    return value;\n  }\n\n  formatPotentialTip = (value) => {\n    //Todo : refactor to make it more intelligent\n    if (value == 0)\n      return 'A';\n    if (value == 50)\n      return 'B';\n    if (value == 100)\n      return 'C';\n    return value;\n  }\n\n  OnBuinsessUnitChange = (newBusinessUnit: string []) => {\n    this.props.store.Talent.changeBusinessUnit(newBusinessUnit);\n    console.log(`Business Unit changed ${newBusinessUnit}`);\n  }\n\n  OnFunctionChange = (newFunction: string) => {\n\n  }\n\n  OnAreaHeadChange = (newHeadArea: string) => {\n\n  }\n  OnEmployeeChange = (newEmployeeName: string) => {\n\n  }\n  OnEmployeeIDChange = (newEmployeeId: string) => {\n\n  }\n\n  OnGradeChange = (newGrade: string) => {\n\n  }\n\n  OnPositionChange = (newPosition: string) => {\n\n  }\n\n  OnMovementChange = (newMovement: string) => {\n\n  }\n\n  OnFlightRiskChange = (newFlightRisk: string) => {\n\n  }\n\n  OnBusinessRiskChange = (newBusinessRisk: string) => {\n\n  }\n  OnPotentialRatingChange = (newPotentialRating: string) => {\n\n  }\n  OnPerformanceRatingChange = (newPerformanceRating: string) => {\n\n  }\n  OnDevelopmentRequirement01Change = (newRequirement: string[]) => {\n\n  }\n  OnDevelopmentRequirement02Change = (newRequirement: string[]) => {\n\n  }\n\n  render() {\n\n    const {getFieldDecorator, getFieldsError, getFieldError, isFieldTouched} = this.props.form;\n\n    const businessUnitsError = isFieldTouched('businessUnits') && getFieldError('businessUnits');\n    const passwordError = isFieldTouched('password') && getFieldError('password');\n    const {formLayout} = this.state;\n    const Option = Select.Option;\n    return (\n      <div>\n        {/*{this.props.store.Talent.grade}\n        <Row><Col span={24} style={{height: '112px', backgroundColor: \"#078181\"}}>\n          <div style={{\n            margin: '38px 54px 56px 32px',\n            fontSize: '16px',\n            fontWeight: 200,\n            letterSpacing: '1px',\n            lineHeight: '18px',\n            backgroundColor: \"#078181\",\n            color: 'white'\n          }}>CREATE A <b>TALENT RECORD</b></div>\n        </Col></Row>*/}\n        <Row><Col span={24}>\n          <Form layout=\"vertical\" onSubmit={this.handleSubmit}\n                style={{border: '0px solid black', padding: '0px 5px 5px 5px'}}>\n            <Divider orientation='left'>Employee Information</Divider>\n            <Row gutter={20}>\n              <Col span={16}>\n                <FormItem label={<span>\n              Business Unit&nbsp;\n                  <Tooltip title=\"You have to select the Division->Unit->Stream->Location?\">\n                <Icon type=\"question-circle-o\"/>\n              </Tooltip>\n            </span>} {...formItemLayout}>\n                  <CascadeSelector\n                    items={this.props.store.LookupDataStore.BusinessUnitsLookupData}\n                    value={this.props.store.Talent.BusinessUnits}\n                    form={this.props.form}\n                    placeholder=\"Please select a business unit\"\n                    validationMessage='Please select a business unit!'\n                    controlId=\"businessUnits\"\n                    changed={this.OnBuinsessUnitChange}\n                  />\n                </FormItem>\n              </Col>\n              <Col span={8}>\n                <FormItem label=\"Function\" {...formItemLayout}>\n                  <Selector\n                    items={this.props.store.LookupDataStore.BusinessFunctionsLookupData}\n                    form={this.props.form}\n                    value={this.props.store.Talent.Function}\n                    placeholder='Please select a business function'\n                    controlId=\"businessFunctions\"\n                    validationMessage='Please select a function!'\n                    changed={this.OnFunctionChange}\n                  />\n                </FormItem>\n              </Col>\n            </Row>\n\n            <Row gutter={20}>\n              <Col span={8}> <FormItem label=\"Head of Area\" {...formItemLayout}>\n                {getFieldDecorator('AreaHead', {\n                  rules: [{required: true, message: 'Head of Area?'}],\n                })(\n                  <UserRemoteSelect/>\n                )}\n              </FormItem></Col>\n              <Col span={8}><FormItem label=\"Manager's Name\" {...formItemLayout}>\n                {getFieldDecorator('managerName', {\n                  rules: [{required: true, message: 'manager name?'}],\n                })(\n                  <UserRemoteSelect/>\n                )}\n              </FormItem></Col>\n              <Col span={8}><FormItem label=\"Employee\" {...formItemLayout}>\n                {getFieldDecorator('employee', {\n                  initialValue: \"Khalil, Mohamed\",\n                  rules: [{required: true, message: 'employee name?'}],\n                })(\n                  <UserRemoteSelect/>\n                )}\n              </FormItem></Col>\n            </Row>\n\n\n            <Row gutter={20}>\n              <Col span={8}><FormItem label=\"Employee ID\" {...formItemLayout}>\n                {getFieldDecorator('EmployeeId', {\n                  rules: [{required: true, message: 'Employee ID?'}],\n                })(\n                  <Input size=\"small\" placeholder=\"Employee ID\"/>\n                )}\n              </FormItem></Col>\n              <Col span={8}> <FormItem label=\"Grade\" {...formItemLayout}>\n                <Selector\n                  items={this.props.store.LookupDataStore.GradeLookupData}\n                  form={this.props.form}\n                  value={this.props.store.Talent.Grade}\n                  placeholder='Please select a grade'\n                  controlId=\"grade\"\n                  validationMessage='Please select a grade!'\n                  changed={this.OnGradeChange}\n                />\n\n              </FormItem></Col>\n              <Col span={8}> <FormItem label=\"Position\" {...formItemLayout}>\n                {getFieldDecorator('position', {\n                  initialValue: \"IT Developer\",\n                  rules: [{required: true, message: 'position?'}],\n                })(\n                  <Input size=\"small\" placeholder=\"Position\"/>\n                )}\n              </FormItem></Col>\n            </Row>\n\n            <Divider orientation='left'>Performance & Potential Ratings</Divider>\n            <Row gutter={20}><Col span={4}><FormItem label=\"New To Rate?\" {...formItemLayout}>\n              {getFieldDecorator('newToRate', {\n                rules: [{required: true, message: 'Too new to rate ?'}],\n              })(\n                <NewHireSwitch/>\n              )}\n            </FormItem></Col>\n\n              <Col span={10}><FormItem label=\"Performance Rating\" {...formItemLayout}>\n\n              <SliderSelector\n                items={this.props.store.LookupDataStore.PerformanceRatingLookupData}\n                form={this.props.form}\n                value={this.props.store.Talent.Performance}\n                controlId=\"performance\"\n                validationMessage=\"Please select a rating for the performance\"\n                changed={this.OnPerformanceRatingChange}\n                formatter={this.formatPerformanceTip}\n              />\n            </FormItem></Col>\n              <Col span={10}> <FormItem label=\"Potential Rating\" {...formItemLayout}>\n                <SliderSelector\n                  items={this.props.store.LookupDataStore.PotentialRatingLookupData}\n                  form={this.props.form}\n                  value={this.props.store.Talent.Potential}\n                  controlId=\"potential\"\n                  validationMessage=\"Please select a rating for the potential\"\n                  changed={this.OnPotentialRatingChange}\n                  formatter={this.formatPotentialTip}/>\n              </FormItem></Col></Row>\n\n\n            <Divider orientation='left'>Movement</Divider>\n            <FormItem label=\"Movement Status\" {...formItemLayout}>\n              <OptionsSelector\n                items={this.props.store.LookupDataStore.MovementLookupData}\n                form={this.props.form}\n                value={this.props.store.Talent.Movement}\n                controlId=\"movement\"\n                validationMessage=\"Please select a movement status\"\n                changed={this.OnMovementChange}\n              />\n            </FormItem>\n\n            <Divider>Risk</Divider>\n            <Row gutter={20}>\n              <Col span={12}><FormItem label=\"Flight Risk\" {...formItemLayout}>\n                <OptionsSelector\n                  items={this.props.store.LookupDataStore.RiskLookupData}\n                  form={this.props.form}\n                  value={this.props.store.Talent.FlightRisk}\n                  controlId=\"flightRisk\"\n                  validationMessage=\"Please select flight risk!\"\n                  changed={this.OnFlightRiskChange}\n                />\n\n              </FormItem></Col>\n\n              <Col span={12}>{<FormItem label=\"Business Risk\" {...formItemLayout}>\n\n                <OptionsSelector\n                  items={this.props.store.LookupDataStore.RiskLookupData}\n                  form={this.props.form}\n                  value={this.props.store.Talent.BusinessRisk}\n                  controlId=\"businessRisk\"\n                  validationMessage=\"Please select business risk!\"\n                  changed={this.OnBusinessRiskChange}\n                />\n              </FormItem>}</Col>\n            </Row>\n\n\n            <Divider orientation='left'>Development Requirements</Divider>\n            <Row gutter={20}>\n              <Col span={12}> <FormItem label=\"Development Requirements 1st\" {...formItemLayout}>\n\n                <CascadeSelector\n                  items={this.props.store.LookupDataStore.DevelopmentRequirementsLookupData}\n                  form={this.props.form}\n                  value={this.props.store.Talent.DevelopmentRequirement01}\n                  placeholder=\"Please select a development requirement\"\n                  validationMessage='Please select a developement requirement!'\n                  controlId=\"developmentRequirement_01\"\n                  changed={this.OnDevelopmentRequirement01Change}\n                />\n              </FormItem></Col>\n\n              <Col span={12}> <FormItem label=\"Development Requirements 2nd\" {...formItemLayout}>\n                <CascadeSelector\n                  items={this.props.store.LookupDataStore.DevelopmentRequirementsLookupData}\n                  form={this.props.form}\n                  value={this.props.store.Talent.DevelopmentRequirement02}\n                  placeholder=\"Please select a development requirement\"\n                  validationMessage='Please select a developement requirement!'\n                  controlId=\"developmentRequirement_02\"\n                  changed={this.OnDevelopmentRequirement01Change}\n                />\n              </FormItem></Col>\n\n\n            </Row>\n            <Row>\n              <Col span={24}>\n                <FormItem label=\"Notes\" {...formItemLayout}>\n                  {getFieldDecorator('devNotes', {\n                    rules: [{required: true, message: 'Please fill in some comments'}],\n                  })(\n                    <Input.TextArea rows={5}/>\n                  )}\n                </FormItem>\n              </Col>\n            </Row>\n            <Row>\n              <Col span={24}>\n\n\n                <Row>\n                  <Col span={24} style={{textAlign: 'right'}}>\n                    <Button type=\"primary\" htmlType=\"submit\" disabled={hasErrors(getFieldsError())}>Submit</Button>\n                    <Button style={{marginLeft: 8}} htmlType=\"reset\">\n                      Clear\n                    </Button>\n                    <Button style={{marginLeft: 8}} htmlType=\"button\">\n                      Cancel\n                    </Button>\n                  </Col>\n                </Row>\n              </Col>\n            </Row>\n\n          </Form>\n        </Col></Row>\n      </div>\n    );\n\n\n  }\n}\n\nconst wrappedForm = Form.create<ITalentRecordEditorProps>()(TalentRecordEditor);\nexport default wrappedForm;\n/*const formItemLayout = formLayout === 'horizontal' ? {\n  labelCol: { span: 4 },\n  wrapperCol: { span: 7 },\n} : null;*/\nconst formItemLayout = {\n  /* labelCol: {\n     xs: {span: 40},\n     sm: {span: 8},\n   },\n   wrapperCol: {\n     xs: {span: 40},\n     sm: {span: 16},\n   },*/\n};\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx	(date 1526454522000)
++++ src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx	(date 1526477541936)
+@@ -117,6 +117,11 @@
+ 
+   }
+ 
++  onSubmit=()=>{
++    console.log("Submitting");
++    this.props.store.TalentDataStore.SaveTalentRecord();
++}
++
+   render() {
+ 
+     const {getFieldDecorator, getFieldsError, getFieldError, isFieldTouched} = this.props.form;
+@@ -352,7 +357,7 @@
+ 
+                 <Row>
+                   <Col span={24} style={{textAlign: 'right'}}>
+-                    <Button type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())}>Submit</Button>
++                    <Button type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())} onClick={this.onSubmit}>Submit</Button>
+                     <Button style={{marginLeft: 8}} htmlType="reset">
+                       Clear
+                     </Button>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"911ba6af-c74c-44e6-94cb-d15df8b37c13\" name=\"Default\" comment=\"\" />\n    <ignored path=\"$PROJECT_DIR$/.tmp/\" />\n    <ignored path=\"$PROJECT_DIR$/temp/\" />\n    <ignored path=\"$PROJECT_DIR$/tmp/\" />\n    <ignored path=\"$PROJECT_DIR$/.idea/httpRequests/\" />\n    <option name=\"EXCLUDED_CONVERTED_TO_IGNORED\" value=\"true\" />\n    <option name=\"TRACKING_ENABLED\" value=\"true\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ChangesViewManager\" show_ignored=\"true\" />\n  <component name=\"FileEditorManager\">\n    <splitter split-orientation=\"horizontal\" split-proportion=\"0.42064714\">\n      <split-first>\n        <leaf SIDE_TABS_SIZE_LIMIT_KEY=\"375\">\n          <file leaf-file-name=\"Talents.ts\" pinned=\"false\" current-in-tab=\"true\">\n            <entry file=\"file://$PROJECT_DIR$/src/stores/services/mockData/Talents.ts\">\n              <provider selected=\"true\" editor-type-id=\"text-editor\">\n                <state relative-caret-position=\"20\">\n                  <caret line=\"6\" column=\"12\" selection-start-line=\"1\" selection-start-column=\"1\" selection-end-line=\"24\" selection-end-column=\"5\" />\n                </state>\n              </provider>\n            </entry>\n          </file>\n          <file leaf-file-name=\"TalentRecordEditor.tsx\" pinned=\"false\" current-in-tab=\"false\">\n            <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx\">\n              <provider selected=\"true\" editor-type-id=\"text-editor\">\n                <state relative-caret-position=\"5058\">\n                  <caret line=\"250\" column=\"39\" selection-start-line=\"250\" selection-start-column=\"39\" selection-end-line=\"250\" selection-end-column=\"39\" />\n                  <folding>\n                    <element signature=\"e#0#31#0\" expanded=\"true\" />\n                    <element signature=\"e#747#791#0\" expanded=\"true\" />\n                  </folding>\n                </state>\n              </provider>\n            </entry>\n          </file>\n          <file leaf-file-name=\"TalentRecordFormsWebPart.tsx\" pinned=\"false\" current-in-tab=\"false\">\n            <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx\">\n              <provider selected=\"true\" editor-type-id=\"text-editor\">\n                <state>\n                  <folding>\n                    <element signature=\"e#0#31#0\" expanded=\"true\" />\n                  </folding>\n                </state>\n              </provider>\n            </entry>\n          </file>\n          <file leaf-file-name=\"LookupDataStore.ts\" pinned=\"false\" current-in-tab=\"false\">\n            <entry file=\"file://$PROJECT_DIR$/src/stores/LookupDataStore.ts\">\n              <provider selected=\"true\" editor-type-id=\"text-editor\">\n                <state relative-caret-position=\"202\">\n                  <caret line=\"33\" column=\"9\" selection-start-line=\"33\" selection-start-column=\"9\" selection-end-line=\"33\" selection-end-column=\"9\" />\n                </state>\n              </provider>\n            </entry>\n          </file>\n          <file leaf-file-name=\"SliderSelector.tsx\" pinned=\"false\" current-in-tab=\"false\">\n            <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx\">\n              <provider selected=\"true\" editor-type-id=\"text-editor\">\n                <state relative-caret-position=\"378\">\n                  <caret line=\"18\" column=\"8\" selection-start-line=\"18\" selection-start-column=\"8\" selection-end-line=\"18\" selection-end-column=\"8\" />\n                  <folding>\n                    <element signature=\"e#0#31#0\" expanded=\"true\" />\n                  </folding>\n                </state>\n              </provider>\n            </entry>\n          </file>\n        </leaf>\n      </split-first>\n      <split-second>\n        <leaf>\n          <file leaf-file-name=\"TalentsStore.ts\" pinned=\"false\" current-in-tab=\"true\">\n            <entry file=\"file://$PROJECT_DIR$/src/stores/TalentsStore.ts\">\n              <provider selected=\"true\" editor-type-id=\"text-editor\">\n                <state relative-caret-position=\"76\">\n                  <caret line=\"19\" column=\"45\" selection-start-line=\"19\" selection-start-column=\"45\" selection-end-line=\"19\" selection-end-column=\"45\" />\n                </state>\n              </provider>\n            </entry>\n          </file>\n        </leaf>\n      </split-second>\n    </splitter>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"TypeScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FindInProjectRecents\">\n    <findStrings>\n      <find>t.</find>\n      <find>Value</find>\n      <find>value</find>\n      <find>ant-input</find>\n      <find>ant-</find>\n      <find>input</find>\n      <find>push</find>\n      <find>ant</find>\n      <find>css</find>\n      <find>radi</find>\n      <find>radius</find>\n      <find>movement</find>\n      <find>Function</find>\n      <find>selected</find>\n      <find>BusinessFunction</find>\n      <find>Divison</find>\n    </findStrings>\n    <replaceStrings>\n      <replace>types.</replace>\n      <replace>types.optional(types.string,&quot;&quot;)</replace>\n      <replace>Division</replace>\n    </replaceStrings>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\n      <list>\n        <option value=\"Mohamed Khalil\" />\n      </list>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../..\" />\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$/../..\" value=\"Stores_Refactoring\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"IdeDocumentHistory\">\n    <option name=\"CHANGED_PATHS\">\n      <list>\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/DevelopmentRequirements.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/DevelopmentRequirementsLookupDataService.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/DataProviderFactory.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/DevelopmentRequirementCascader.tsx\" />\n        <option value=\"$PROJECT_DIR$/lib/stores/services/mockData/Talents.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/BusinessFunctionsStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/BusinessUnitsLookupDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/DevelopmentRequirementsDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/RiskLookupDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/LookupDataStores/BusinessFunctionsStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/LookupDataStores/BusinessUnitsLookupDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/LookupDataStores/DevelopmentRequirementsDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/LookupDataStores/RiskLookupDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/BusinessUnits.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordForms.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordFormsProps.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordEditorProps.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/controls/BusinessUnitsCascader.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/controls/FunctionSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.manifest.json\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/BusinessUnitsCascader.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/DevelopmentRequirementCascader.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/RiskSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.module.scss\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/TalentRecordsService.ts\" />\n        <option value=\"$PROJECT_DIR$/tsconfig.json\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/FunctionSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/PerformanceRatingSlider.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/stores/Common/DataProviderFactory.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/LookupDataStore.ts\" />\n        <option value=\"$PROJECT_DIR$/node_modules/antd/lib/style/themes/default.less\" />\n        <option value=\"$PROJECT_DIR$/ant-theme-vars.less\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/ant-default-vars.less\" />\n        <option value=\"$PROJECT_DIR$/gulpfile.js\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordTimeLine/components/TalentRecordTimeLine.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordTimeLine/TalentRecordTimeLineWebPart.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentEntryEntry.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/stores/ViewStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/stores/AppStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/CascadeSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/NewHireSwitch.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/UserSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/ant-theme-vars.less\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/Selector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/OptionsSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/stores/TalentsStore.ts\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/Talents.ts\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"JsBuildToolGruntFileManager\" detection-done=\"true\" sorting=\"DEFINITION_ORDER\" />\n  <component name=\"JsBuildToolPackageJson\" detection-done=\"true\" sorting=\"DEFINITION_ORDER\">\n    <package-json value=\"$PROJECT_DIR$/package.json\" />\n  </component>\n  <component name=\"JsFlowSettings\">\n    <service-enabled>true</service-enabled>\n    <exe-path />\n    <other-services-enabled>true</other-services-enabled>\n    <auto-save>true</auto-save>\n  </component>\n  <component name=\"JsGulpfileManager\">\n    <detection-done>true</detection-done>\n    <gulpfiles>\n      <GulpfileState>\n        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>\n        <tasks>\n          <GulpTaskState>\n            <task-name>clean</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>build</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>default</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>bundle</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>dev-deploy</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>deploy-azure-storage</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>package-solution</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>test</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>serve</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>trust-dev-cert</task-name>\n          </GulpTaskState>\n          <GulpTaskState>\n            <task-name>untrust-dev-cert</task-name>\n          </GulpTaskState>\n        </tasks>\n      </GulpfileState>\n    </gulpfiles>\n    <sorting>DEFINITION_ORDER</sorting>\n  </component>\n  <component name=\"NodeModulesDirectoryManager\">\n    <handled-path value=\"$PROJECT_DIR$/node_modules\" />\n  </component>\n  <component name=\"NodePackageJsonFileManager\">\n    <packageJsonPaths>\n      <path value=\"$PROJECT_DIR$/package.json\" />\n    </packageJsonPaths>\n  </component>\n  <component name=\"ProjectFrameBounds\" extendedState=\"6\">\n    <option name=\"x\" value=\"77\" />\n    <option name=\"width\" value=\"943\" />\n    <option name=\"height\" value=\"768\" />\n  </component>\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectView\">\n    <navigator proportions=\"\" version=\"1\">\n      <foldersAlwaysOnTop value=\"true\" />\n    </navigator>\n    <panes>\n      <pane id=\"Scope\">\n        <subPane subId=\"Changed Files\">\n          <expand>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n            </path>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n              <item name=\".idea\" type=\"cbb8eebc:String\" user=\".idea\" />\n            </path>\n          </expand>\n          <select />\n        </subPane>\n        <subPane subId=\"Project Files\">\n          <expand>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n            </path>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n              <item name=\"src\" type=\"cbb8eebc:String\" user=\"src\" />\n            </path>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n              <item name=\"src\" type=\"cbb8eebc:String\" user=\"src\" />\n              <item name=\"webparts\" type=\"cbb8eebc:String\" user=\"webparts\" />\n            </path>\n          </expand>\n          <select />\n        </subPane>\n        <subPane subId=\"Default\">\n          <expand>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n            </path>\n            <path>\n              <item name=\"Root\" type=\"cbb8eebc:String\" user=\"Root\" />\n              <item name=\"talent-record-forms\" type=\"cbb8eebc:String\" user=\"talent-record-forms\" />\n              <item name=\".idea\" type=\"cbb8eebc:String\" user=\".idea\" />\n            </path>\n          </expand>\n          <select />\n        </subPane>\n      </pane>\n      <pane id=\"ProjectPane\">\n        <subPane>\n          <expand>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"stores\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"stores\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"Common\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"stores\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"LookupDataStores\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"stores\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"services\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"stores\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"services\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"mockData\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"webparts\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"webparts\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"talentRecordForms\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"webparts\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"talentRecordForms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"components\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"webparts\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"talentRecordForms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"components\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"TalentRecordEditor\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n            <path>\n              <item name=\"talent-record-forms\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"talent-record-forms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"webparts\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"talentRecordForms\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"components\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"TalentRecordEditor\" type=\"462c0819:PsiDirectoryNode\" />\n              <item name=\"controls\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n          </expand>\n          <select />\n        </subPane>\n      </pane>\n    </panes>\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"TODO_SCOPE\" value=\"Project Files\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"js.buildTools.gulp.gulp_package_dir\" value=\"$PROJECT_DIR$/node_modules/gulp\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.prettier\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.prettier\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.prettier\" value=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\node_modules\\prettier\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\node_modules\\tslint\" />\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\n    <property name=\"ts.external.directory.path\" value=\"$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\src\" />\n      <recent name=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\src\\webparts\\talentRecordForms\\components\\TalentRecordEditor\" />\n      <recent name=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\src\\webparts\\talentRecordForms\\components\\controls\" />\n      <recent name=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\src\\stores\\Common\" />\n      <recent name=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\\src\\stores\\LookupDataStores\" />\n    </key>\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"C:\\Dev\\Kier\\Kier_Talent_DB\\frontend\\talent-record-forms\" />\n      <recent name=\"C:\\Dev\\talent-portal-refresh\\frontend\\talent-record-forms\\src\\webparts\\talentRecordForms\\components\" />\n    </key>\n  </component>\n  <component name=\"RunDashboard\">\n    <option name=\"ruleStates\">\n      <list>\n        <RuleState>\n          <option name=\"name\" value=\"ConfigurationTypeDashboardGroupingRule\" />\n        </RuleState>\n        <RuleState>\n          <option name=\"name\" value=\"StatusDashboardGroupingRule\" />\n        </RuleState>\n      </list>\n    </option>\n  </component>\n  <component name=\"RunManager\" selected=\"Gulp.js.serve\">\n    <configuration name=\"serve JavaScript\" type=\"JavascriptDebugType\" factoryName=\"JavaScript Debug\" uri=\"https://localhost:4321/temp/workbench.html\" />\n    <configuration default=\"true\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile />\n      <tasks />\n      <arguments />\n      <envs />\n    </configuration>\n    <configuration name=\"build\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\" temporary=\"true\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>\n      <tasks>\n        <task>build</task>\n      </tasks>\n      <arguments />\n      <envs />\n    </configuration>\n    <configuration name=\"bundle\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\" temporary=\"true\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>\n      <tasks>\n        <task>bundle</task>\n      </tasks>\n      <arguments />\n      <envs />\n    </configuration>\n    <configuration name=\"default\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\" temporary=\"true\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>\n      <tasks>\n        <task>default</task>\n      </tasks>\n      <arguments />\n      <envs />\n    </configuration>\n    <configuration name=\"package-solution\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\" temporary=\"true\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>\n      <tasks>\n        <task>package-solution</task>\n      </tasks>\n      <arguments />\n      <envs />\n    </configuration>\n    <configuration name=\"serve\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\" editBeforeRun=\"true\" temporary=\"true\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>\n      <tasks>\n        <task>serve</task>\n      </tasks>\n      <arguments />\n      <envs />\n    </configuration>\n    <list>\n      <item itemvalue=\"JavaScript Debug.serve JavaScript\" />\n      <item itemvalue=\"Gulp.js.serve\" />\n      <item itemvalue=\"Gulp.js.build\" />\n      <item itemvalue=\"Gulp.js.bundle\" />\n      <item itemvalue=\"Gulp.js.default\" />\n      <item itemvalue=\"Gulp.js.package-solution\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Gulp.js.serve\" />\n        <item itemvalue=\"Gulp.js.package-solution\" />\n        <item itemvalue=\"Gulp.js.default\" />\n        <item itemvalue=\"Gulp.js.bundle\" />\n        <item itemvalue=\"Gulp.js.build\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"911ba6af-c74c-44e6-94cb-d15df8b37c13\" name=\"Default\" comment=\"\" />\n      <created>1525263114550</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1525263114550</updated>\n      <workItem from=\"1525263116088\" duration=\"1205000\" />\n      <workItem from=\"1525265393830\" duration=\"1332000\" />\n      <workItem from=\"1525330275760\" duration=\"4363000\" />\n      <workItem from=\"1525336004792\" duration=\"16713000\" />\n      <workItem from=\"1525418318629\" duration=\"15651000\" />\n      <workItem from=\"1525518070294\" duration=\"255000\" />\n      <workItem from=\"1525541368320\" duration=\"13895000\" />\n      <workItem from=\"1525596248691\" duration=\"17206000\" />\n      <workItem from=\"1525675327826\" duration=\"26889000\" />\n      <workItem from=\"1525782438612\" duration=\"11650000\" />\n      <workItem from=\"1525949405318\" duration=\"2213000\" />\n      <workItem from=\"1525960476331\" duration=\"10040000\" />\n      <workItem from=\"1526024986600\" duration=\"13793000\" />\n      <workItem from=\"1526201142346\" duration=\"22968000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"- Resolving issues in the TypeScript compiler configurations.&#10;- Added the plumping of Risks and Business Functions lookup data.&#10;- Lookup data plumping code currently reads from mock data.i.e. not connected to SharePoint.\">\n      <created>1525606067803</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525606067804</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"- Adding plumping for lookup data Development Requirements, Business Units\">\n      <created>1525622373955</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525622373955</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Refactoring the Lookup Data plumping\">\n      <created>1525679015686</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525679015687</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Renamed webpart to TalentRecordEditor\">\n      <created>1525680083069</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525680083069</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Refactored WebParts UI folder structure\">\n      <created>1525680290202</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525680290202</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Intermin commit\">\n      <created>1525680610326</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525680610326</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"More refactoring for the WebPart UI folder structure.\">\n      <created>1525682032341</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525682032341</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Half way through finishing the Talent Data plumping.&#10;Web part tests the QueryString for Talent to be edited.&#10;Next, we need to finish connect TalentDataStore to the form, start loading real data, do the people picker.\">\n      <created>1525721434949</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525721434949</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Refactored more of the TalentRecordsEditor into smaller components ( SliderSelector, CascadeSelector, Selector). This is pre-Brians meeting\">\n      <created>1525788594776</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525788594776</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Refactored Risk Selectors , Movement Selectors, and Notes. Data Binding is not yet fully done. The focus got sidetracked to show progress to Brian\">\n      <created>1525792765970</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525792765970</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"AntD LESS Styles\">\n      <created>1525880043087</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525880043087</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Completed the People Picker autocomplete behaviour\">\n      <created>1525971577599</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1525971577600</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"Adding the Talen Record Timeline\">\n      <created>1526027073445</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1526027073446</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"Refactored the Editor Control. Moved the view model properties to the Talent Model. Two-way data binding is still work in progress\">\n      <created>1526219804963</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1526219804963</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"Camel-Casing the properties of the Talent Model\">\n      <created>1526366695293</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1526366695293</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"Camel-Casing the properties of the Talent Model\">\n      <created>1526366794750</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1526366794750</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Fixing SliderSelector , and deleted unnecessary computed properties in the Talent Model\">\n      <created>1526374783968</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1526374783968</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"18\" />\n    <option name=\"trackContextForNewChangelist\" value=\"true\" />\n    <servers />\n  </component>\n  <component name=\"TimeTrackingManager\">\n    <option name=\"totallyTimeSpent\" value=\"170381000\" />\n  </component>\n  <component name=\"TodoView\" selected-index=\"2\">\n    <todo-panel id=\"selected-file\">\n      <is-autoscroll-to-source value=\"true\" />\n    </todo-panel>\n    <todo-panel id=\"all\">\n      <are-packages-shown value=\"true\" />\n      <is-autoscroll-to-source value=\"true\" />\n    </todo-panel>\n  </component>\n  <component name=\"ToolWindowManager\">\n    <frame x=\"54\" y=\"-8\" width=\"1320\" height=\"784\" extended-state=\"6\" />\n    <layout>\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"6\" weight=\"0.7396387\" />\n      <window_info anchor=\"bottom\" id=\"Event Log\" order=\"14\" sideWeight=\"0.50027305\" side_tool=\"true\" weight=\"0.26918918\" />\n      <window_info anchor=\"bottom\" id=\"File Transfer\" order=\"13\" weight=\"0.32731137\" />\n      <window_info active=\"true\" anchor=\"bottom\" id=\"Version Control\" order=\"7\" sideWeight=\"0.49972692\" visible=\"true\" weight=\"0.69793326\" />\n      <window_info anchor=\"bottom\" auto_hide=\"true\" id=\"Run\" order=\"2\" sideWeight=\"0.49972692\" weight=\"0.3290938\" />\n      <window_info id=\"npm\" order=\"4\" sideWeight=\"0.3607532\" side_tool=\"true\" weight=\"0.19704953\" />\n      <window_info anchor=\"bottom\" auto_hide=\"true\" id=\"Terminal\" order=\"10\" weight=\"0.36663124\" />\n      <window_info id=\"Gulp\" order=\"2\" sideWeight=\"0.36875665\" side_tool=\"true\" weight=\"0.29109776\" />\n      <window_info anchor=\"bottom\" id=\"TypeScript\" order=\"9\" sideWeight=\"0.49972692\" weight=\"0.36875665\" />\n      <window_info content_ui=\"combo\" id=\"Project\" order=\"0\" sideWeight=\"0.63124335\" visible=\"true\" weight=\"0.2881754\" />\n      <window_info anchor=\"bottom\" id=\"Docker\" order=\"8\" show_stripe_button=\"false\" />\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"1\" weight=\"0.35175344\" />\n      <window_info id=\"Structure\" order=\"1\" sideWeight=\"0.46543002\" side_tool=\"true\" weight=\"0.26160568\" />\n      <window_info id=\"Favorites\" order=\"3\" side_tool=\"true\" />\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"3\" weight=\"0.24959217\" />\n      <window_info anchor=\"bottom\" id=\"Thumbnails\" order=\"11\" weight=\"0.32943678\" />\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"5\" weight=\"0.4\" />\n      <window_info anchor=\"right\" id=\"Commander\" internal_type=\"SLIDING\" order=\"0\" type=\"SLIDING\" weight=\"0.4\" />\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\n      <window_info anchor=\"bottom\" id=\"REST Client\" order=\"15\" weight=\"0.71675676\" />\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"0\" />\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"4\" weight=\"0.25\" />\n      <window_info anchor=\"bottom\" id=\"Messages\" order=\"12\" />\n    </layout>\n    <layout-to-restore>\n      <window_info anchor=\"bottom\" id=\"Version Control\" order=\"9\" sideWeight=\"0.49972692\" weight=\"0.5078044\" />\n      <window_info id=\"Gulp\" order=\"2\" sideWeight=\"0.3598131\" side_tool=\"true\" weight=\"0.23393045\" />\n      <window_info active=\"true\" content_ui=\"combo\" id=\"Project\" order=\"0\" sideWeight=\"0.6401869\" visible=\"true\" weight=\"0.23393045\" />\n      <window_info id=\"npm\" order=\"3\" sideWeight=\"0.46118012\" side_tool=\"true\" weight=\"0.18124342\" />\n      <window_info anchor=\"bottom\" auto_hide=\"true\" id=\"Run\" order=\"2\" sideWeight=\"0.49972692\" weight=\"0.29344434\" />\n      <window_info anchor=\"bottom\" id=\"Docker\" order=\"8\" show_stripe_button=\"false\" />\n      <window_info anchor=\"bottom\" id=\"Thumbnails\" order=\"7\" weight=\"0.32943678\" />\n      <window_info id=\"Structure\" order=\"1\" sideWeight=\"0.46543002\" side_tool=\"true\" weight=\"0.26160568\" />\n      <window_info anchor=\"right\" id=\"Commander\" internal_type=\"SLIDING\" order=\"0\" type=\"SLIDING\" weight=\"0.4\" />\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"6\" weight=\"0.32943678\" />\n      <window_info anchor=\"bottom\" id=\"TypeScript\" order=\"10\" sideWeight=\"0.49972692\" weight=\"0.36981934\" />\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"0\" />\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"3\" weight=\"0.25078043\" />\n      <window_info anchor=\"bottom\" auto_hide=\"true\" id=\"Terminal\" order=\"11\" weight=\"0.38469714\" />\n      <window_info anchor=\"bottom\" id=\"Event Log\" order=\"12\" sideWeight=\"0.50027305\" side_tool=\"true\" weight=\"0.4070138\" />\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"5\" weight=\"0.4\" />\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"4\" weight=\"0.25\" />\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\n      <window_info anchor=\"bottom\" id=\"File Transfer\" order=\"14\" weight=\"0.32882413\" />\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"1\" visible=\"true\" weight=\"0.32845187\" />\n      <window_info anchor=\"bottom\" id=\"Messages\" order=\"13\" />\n      <window_info id=\"Favorites\" order=\"4\" side_tool=\"true\" />\n    </layout-to-restore>\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"1\" />\n    <option name=\"exactExcludedFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordFormsProps.js\" />\n        <option value=\"$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordFormsProps.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/BusinessFunctionsService.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/BusinessFunctionsService.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/BusinessUnitsLookupDataService.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/BusinessUnitsLookupDataService.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/RisksService.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/RisksService.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/DevelopmentRequirements.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/PerformanceRating.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/Functions.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/DevelopmentRequirements.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/Functions.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/Risks.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/BusinessUnits.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/BusinessUnits.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/PerformanceRating.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/mockData/Risks.js.map\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/DevelopmentRequirementsLookupDataService.js\" />\n        <option value=\"$PROJECT_DIR$/src/stores/services/DevelopmentRequirementsLookupDataService.js.map\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"LONG_EDGES_VISIBLE\" value=\"true\" />\n              <option name=\"BEK_SORT_TYPE\" value=\"1\" />\n              <option name=\"RECENTLY_FILTERED_USER_GROUPS\">\n                <collection />\n              </option>\n              <option name=\"RECENTLY_FILTERED_BRANCH_GROUPS\">\n                <collection>\n                  <UserGroup>\n                    <option name=\"users\">\n                      <list>\n                        <option value=\"origin/Stores_Refactoring\" />\n                      </list>\n                    </option>\n                  </UserGroup>\n                </collection>\n              </option>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"Stores_Refactoring\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n              <option name=\"COLUMN_ORDER\">\n                <list>\n                  <option value=\"0\" />\n                  <option value=\"1\" />\n                  <option value=\"2\" />\n                  <option value=\"3\" />\n                </list>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsContentAnnotationSettings\">\n    <option name=\"myLimit\" value=\"2678400000\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN\" value=\"true\" />\n    <MESSAGE value=\"- Resolving issues in the TypeScript compiler configurations.&#10;- Added the plumping of Risks and Business Functions lookup data.&#10;- Lookup data plumping code currently reads from mock data.i.e. not connected to SharePoint.\" />\n    <MESSAGE value=\"- Adding plumping for lookup data Development Requirements, Business Units\" />\n    <MESSAGE value=\"Refactoring the Lookup Data plumping\" />\n    <MESSAGE value=\"Renamed webpart to TalentRecordEditor\" />\n    <MESSAGE value=\"Refactored WebParts UI folder structure\" />\n    <MESSAGE value=\"Intermin commit\" />\n    <MESSAGE value=\"More refactoring for the WebPart UI folder structure.\" />\n    <MESSAGE value=\"Half way through finishing the Talent Data plumping.&#10;Web part tests the QueryString for Talent to be edited.&#10;Next, we need to finish connect TalentDataStore to the form, start loading real data, do the people picker.\" />\n    <MESSAGE value=\"Refactored more of the TalentRecordsEditor into smaller components ( SliderSelector, CascadeSelector, Selector). This is pre-Brians meeting\" />\n    <MESSAGE value=\"Refactored Risk Selectors , Movement Selectors, and Notes. Data Binding is not yet fully done. The focus got sidetracked to show progress to Brian\" />\n    <MESSAGE value=\"Completed the People Picker autocomplete behaviour\" />\n    <MESSAGE value=\"Adding the Talen Record Timeline\" />\n    <MESSAGE value=\"Refactored the Editor Control. Moved the view model properties to the Talent Model. Two-way data binding is still work in progress\" />\n    <MESSAGE value=\"Camel-Casing the properties of the Talent Model\" />\n    <MESSAGE value=\"Fixing SliderSelector , and deleted unnecessary computed properties in the Talent Model\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Fixing SliderSelector , and deleted unnecessary computed properties in the Talent Model\" />\n    <option name=\"MAKE_NEW_CHANGELIST_ACTIVE\" value=\"true\" />\n    <option name=\"REFORMAT_BEFORE_PROJECT_COMMIT\" value=\"true\" />\n    <option name=\"REARRANGE_BEFORE_PROJECT_COMMIT\" value=\"true\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints-dialog>\n        <breakpoints-dialog />\n      </breakpoints-dialog>\n      <default-breakpoints>\n        <breakpoint type=\"dart-exception\">\n          <properties />\n        </breakpoint>\n      </default-breakpoints>\n      <option name=\"time\" value=\"14\" />\n    </breakpoint-manager>\n  </component>\n  <component name=\"editorHistoryManager\">\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/ant-default-vars.less\" />\n    <entry file=\"file://$PROJECT_DIR$/src/ant-theme-vars.less\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"54\">\n          <caret line=\"3\" selection-start-line=\"3\" selection-end-line=\"3\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/gulpfile.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"256\">\n          <caret line=\"27\" selection-start-line=\"27\" selection-end-line=\"27\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/antd/es/style/themes/default.less\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"321\">\n          <caret line=\"419\" column=\"21\" selection-start-line=\"419\" selection-start-column=\"15\" selection-end-line=\"419\" selection-end-column=\"21\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/antd/lib/style/themes/default.less\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"18\">\n          <caret line=\"48\" column=\"30\" selection-start-line=\"48\" selection-start-column=\"30\" selection-end-line=\"48\" selection-end-column=\"30\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/@microsoft/gulp-core-build-sass/lib/SassTask.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"850\">\n          <caret line=\"202\" selection-start-line=\"202\" selection-end-line=\"202\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/@microsoft/gulp-core-build-sass/lib/SassTask.d.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"522\">\n          <caret line=\"30\" column=\"7\" lean-forward=\"true\" selection-start-line=\"30\" selection-start-column=\"7\" selection-end-line=\"30\" selection-end-column=\"7\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/@microsoft/gulp-core-build-webpack/lib/webpack.config.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"666\">\n          <caret line=\"37\" column=\"12\" lean-forward=\"true\" selection-start-line=\"37\" selection-start-column=\"12\" selection-end-line=\"37\" selection-end-column=\"12\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/README.md\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"216\">\n          <caret line=\"12\" selection-start-line=\"12\" selection-end-line=\"12\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/gulp/bin/gulp.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"1686\">\n          <caret line=\"115\" column=\"2\" selection-start-line=\"115\" selection-start-column=\"2\" selection-end-line=\"115\" selection-end-column=\"2\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/lib/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.module.css\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <caret lean-forward=\"true\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/temp/manifests.json\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"18\">\n          <caret line=\"645\" column=\"23\" lean-forward=\"true\" selection-start-line=\"645\" selection-start-column=\"23\" selection-end-line=\"645\" selection-end-column=\"23\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/temp/manifests.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"18\">\n          <caret line=\"14\" column=\"33\" selection-start-line=\"14\" selection-start-column=\"33\" selection-end-line=\"14\" selection-end-column=\"33\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/dist/2463de96-e4b0-426c-ac7f-77eda07bd2d6.manifest.json\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"850\">\n          <caret line=\"63\" column=\"1\" selection-start-line=\"63\" selection-start-column=\"1\" selection-end-line=\"63\" selection-end-column=\"1\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/package-lock.json\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"1224\">\n          <caret line=\"68\" column=\"19\" selection-start-line=\"68\" selection-start-column=\"19\" selection-end-line=\"68\" selection-end-column=\"19\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/ant-default-vars.less\" />\n    <entry file=\"file://$PROJECT_DIR$/gulpfile.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"256\">\n          <caret line=\"27\" selection-start-line=\"27\" selection-end-line=\"27\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/antd/es/style/themes/default.less\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"321\">\n          <caret line=\"419\" column=\"21\" selection-start-line=\"419\" selection-start-column=\"15\" selection-end-line=\"419\" selection-end-column=\"21\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/config/config.json\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"216\">\n          <caret line=\"12\" column=\"41\" selection-start-line=\"12\" selection-start-column=\"41\" selection-end-line=\"12\" selection-end-column=\"41\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordTimeLine/components/TalentRecordTimeLine.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"144\">\n          <caret line=\"20\" column=\"49\" selection-start-line=\"20\" selection-start-column=\"49\" selection-end-line=\"20\" selection-end-column=\"49\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordTimeLine/TalentRecordTimeLineWebPart.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"252\">\n          <caret line=\"12\" selection-start-line=\"12\" selection-end-line=\"12\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/node_modules/mobx-react/index.d.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"299\">\n          <caret line=\"65\" column=\"13\" selection-start-line=\"65\" selection-start-column=\"13\" selection-end-line=\"65\" selection-end-column=\"13\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/package.json\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"648\">\n          <caret line=\"36\" column=\"14\" selection-start-line=\"36\" selection-start-column=\"14\" selection-end-line=\"36\" selection-end-column=\"14\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/ITalentRecordEditorProps.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <caret column=\"17\" selection-start-column=\"17\" selection-end-column=\"17\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/lib/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"193\">\n          <caret line=\"149\" column=\"157\" selection-start-line=\"149\" selection-start-column=\"157\" selection-end-line=\"149\" selection-end-column=\"157\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/AppStore.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/services/TalentRecordsService.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"90\">\n          <caret line=\"5\" column=\"2\" selection-start-line=\"5\" selection-start-column=\"2\" selection-end-line=\"5\" selection-end-column=\"2\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/LookupDataStores/RiskLookupDataStore.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <folding>\n            <element signature=\"e#0#71#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/ant-theme-vars.less\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"36\">\n          <caret line=\"2\" selection-start-line=\"2\" selection-end-line=\"2\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/UserSelector.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"490\">\n          <caret line=\"62\" column=\"13\" selection-start-line=\"62\" selection-start-column=\"13\" selection-end-line=\"62\" selection-end-column=\"13\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.module.scss.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <folding>\n            <element signature=\"n#!!doc\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentEntryEntry.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"180\">\n          <caret line=\"10\" column=\"3\" selection-start-line=\"10\" selection-start-column=\"3\" selection-end-line=\"10\" selection-end-column=\"3\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/Common/DataProviderFactory.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <caret column=\"2\" selection-start-column=\"2\" selection-end-column=\"2\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.module.scss\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/.yo-rc.json\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/ViewStore.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"306\">\n          <caret line=\"18\" column=\"8\" selection-start-line=\"18\" selection-start-column=\"8\" selection-end-line=\"18\" selection-end-column=\"8\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/services/mockData/Functions.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/services/RisksService.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <folding>\n            <element signature=\"e#0#66#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/.editorconfig\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordFormsProps.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/services/mockData/BusinessUnits.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/CascadeSelector.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"198\">\n          <caret line=\"13\" column=\"5\" selection-start-line=\"13\" selection-start-column=\"5\" selection-end-line=\"13\" selection-end-column=\"5\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/NewHireSwitch.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"216\">\n          <caret line=\"12\" column=\"14\" selection-start-line=\"12\" selection-start-column=\"14\" selection-end-line=\"12\" selection-end-column=\"26\" />\n          <folding>\n            <element signature=\"e#0#31#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/OptionsSelector.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"378\">\n          <caret line=\"22\" column=\"62\" selection-start-line=\"22\" selection-start-column=\"62\" selection-end-line=\"22\" selection-end-column=\"62\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/TalentsStore.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"76\">\n          <caret line=\"19\" column=\"45\" selection-start-line=\"19\" selection-start-column=\"45\" selection-end-line=\"19\" selection-end-column=\"45\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/Selector.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"288\">\n          <caret line=\"16\" selection-start-line=\"16\" selection-end-line=\"16\" />\n          <folding>\n            <element signature=\"e#0#31#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/LookupDataStore.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"202\">\n          <caret line=\"33\" column=\"9\" selection-start-line=\"33\" selection-start-column=\"9\" selection-end-line=\"33\" selection-end-column=\"9\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"5058\">\n          <caret line=\"250\" column=\"39\" selection-start-line=\"250\" selection-start-column=\"39\" selection-end-line=\"250\" selection-end-column=\"39\" />\n          <folding>\n            <element signature=\"e#0#31#0\" expanded=\"true\" />\n            <element signature=\"e#747#791#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <folding>\n            <element signature=\"e#0#31#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"378\">\n          <caret line=\"18\" column=\"8\" selection-start-line=\"18\" selection-start-column=\"8\" selection-end-line=\"18\" selection-end-column=\"8\" />\n          <folding>\n            <element signature=\"e#0#31#0\" expanded=\"true\" />\n          </folding>\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/src/stores/services/mockData/Talents.ts\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"20\">\n          <caret line=\"6\" column=\"12\" selection-start-line=\"1\" selection-start-column=\"1\" selection-end-line=\"24\" selection-end-column=\"5\" />\n        </state>\n      </provider>\n    </entry>\n  </component>\n  <component name=\"masterDetails\">\n    <states>\n      <state key=\"Copyright.UI\">\n        <settings>\n          <splitter-proportions>\n            <option name=\"proportions\">\n              <list>\n                <option value=\"0.2\" />\n              </list>\n            </option>\n          </splitter-proportions>\n        </settings>\n      </state>\n      <state key=\"ScopeChooserConfigurable.UI\">\n        <settings>\n          <splitter-proportions>\n            <option name=\"proportions\">\n              <list>\n                <option value=\"0.2\" />\n              </list>\n            </option>\n          </splitter-proportions>\n        </settings>\n      </state>\n    </states>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(date 1526454522000)
++++ .idea/workspace.xml	(date 1526477941389)
+@@ -1,7 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="911ba6af-c74c-44e6-94cb-d15df8b37c13" name="Default" comment="" />
++    <list default="true" id="911ba6af-c74c-44e6-94cb-d15df8b37c13" name="Default" comment="">
++      <change beforePath="$PROJECT_DIR$/../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Constants.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Controllers/TalentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Controllers/TalentsController.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Models/Talent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Models/Talent.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/stores/TalentsStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/TalentsStore.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx" afterDir="false" />
++    </list>
+     <ignored path="$PROJECT_DIR$/.tmp/" />
+     <ignored path="$PROJECT_DIR$/temp/" />
+     <ignored path="$PROJECT_DIR$/tmp/" />
+@@ -15,79 +23,53 @@
+   </component>
+   <component name="ChangesViewManager" show_ignored="true" />
+   <component name="FileEditorManager">
+-    <splitter split-orientation="horizontal" split-proportion="0.42064714">
+-      <split-first>
+-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+-          <file leaf-file-name="Talents.ts" pinned="false" current-in-tab="true">
+-            <entry file="file://$PROJECT_DIR$/src/stores/services/mockData/Talents.ts">
+-              <provider selected="true" editor-type-id="text-editor">
+-                <state relative-caret-position="20">
+-                  <caret line="6" column="12" selection-start-line="1" selection-start-column="1" selection-end-line="24" selection-end-column="5" />
+-                </state>
+-              </provider>
+-            </entry>
+-          </file>
+-          <file leaf-file-name="TalentRecordEditor.tsx" pinned="false" current-in-tab="false">
+-            <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx">
+-              <provider selected="true" editor-type-id="text-editor">
+-                <state relative-caret-position="5058">
+-                  <caret line="250" column="39" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
+-                  <folding>
+-                    <element signature="e#0#31#0" expanded="true" />
+-                    <element signature="e#747#791#0" expanded="true" />
+-                  </folding>
+-                </state>
+-              </provider>
+-            </entry>
+-          </file>
+-          <file leaf-file-name="TalentRecordFormsWebPart.tsx" pinned="false" current-in-tab="false">
+-            <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx">
+-              <provider selected="true" editor-type-id="text-editor">
+-                <state>
+-                  <folding>
+-                    <element signature="e#0#31#0" expanded="true" />
+-                  </folding>
+-                </state>
+-              </provider>
+-            </entry>
+-          </file>
+-          <file leaf-file-name="LookupDataStore.ts" pinned="false" current-in-tab="false">
+-            <entry file="file://$PROJECT_DIR$/src/stores/LookupDataStore.ts">
+-              <provider selected="true" editor-type-id="text-editor">
+-                <state relative-caret-position="202">
+-                  <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+-                </state>
+-              </provider>
+-            </entry>
+-          </file>
+-          <file leaf-file-name="SliderSelector.tsx" pinned="false" current-in-tab="false">
+-            <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx">
+-              <provider selected="true" editor-type-id="text-editor">
+-                <state relative-caret-position="378">
+-                  <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+-                  <folding>
+-                    <element signature="e#0#31#0" expanded="true" />
+-                  </folding>
+-                </state>
+-              </provider>
+-            </entry>
+-          </file>
+-        </leaf>
+-      </split-first>
+-      <split-second>
+-        <leaf>
+-          <file leaf-file-name="TalentsStore.ts" pinned="false" current-in-tab="true">
+-            <entry file="file://$PROJECT_DIR$/src/stores/TalentsStore.ts">
+-              <provider selected="true" editor-type-id="text-editor">
+-                <state relative-caret-position="76">
+-                  <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+-                </state>
+-              </provider>
+-            </entry>
+-          </file>
+-        </leaf>
+-      </split-second>
+-    </splitter>
++    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
++      <file leaf-file-name="TalentsStore.ts" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/src/stores/TalentsStore.ts">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="598">
++              <caret line="180" column="3" lean-forward="true" selection-start-line="180" selection-start-column="3" selection-end-line="180" selection-end-column="3" />
++              <folding>
++                <element signature="e#0#70#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="TalentRecordEditor.tsx" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="54">
++              <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
++              <folding>
++                <element signature="e#0#31#0" expanded="true" />
++                <element signature="e#747#791#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="TalentRecordsService.ts" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/src/stores/services/TalentRecordsService.ts">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="90">
++              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="AppStore.ts" pinned="false" current-in-tab="true">
++        <entry file="file://$PROJECT_DIR$/src/stores/AppStore.ts">
++          <provider selected="true" editor-type-id="text-editor">
++            <state>
++              <folding>
++                <element signature="e#0#49#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++    </leaf>
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -114,6 +96,7 @@
+       <find>selected</find>
+       <find>BusinessFunction</find>
+       <find>Divison</find>
++      <find>axios</find>
+     </findStrings>
+     <replaceStrings>
+       <replace>types.</replace>
+@@ -183,11 +166,11 @@
+         <option value="$PROJECT_DIR$/src/ant-theme-vars.less" />
+         <option value="$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx" />
+         <option value="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/Selector.tsx" />
+-        <option value="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx" />
+         <option value="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/OptionsSelector.tsx" />
+-        <option value="$PROJECT_DIR$/src/stores/TalentsStore.ts" />
+         <option value="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx" />
+         <option value="$PROJECT_DIR$/src/stores/services/mockData/Talents.ts" />
++        <option value="$PROJECT_DIR$/src/stores/TalentsStore.ts" />
++        <option value="$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx" />
+       </list>
+     </option>
+   </component>
+@@ -206,41 +189,6 @@
+     <gulpfiles>
+       <GulpfileState>
+         <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+-        <tasks>
+-          <GulpTaskState>
+-            <task-name>clean</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>build</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>default</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>bundle</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>dev-deploy</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>deploy-azure-storage</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>package-solution</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>test</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>serve</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>trust-dev-cert</task-name>
+-          </GulpTaskState>
+-          <GulpTaskState>
+-            <task-name>untrust-dev-cert</task-name>
+-          </GulpTaskState>
+-        </tasks>
+       </GulpfileState>
+     </gulpfiles>
+     <sorting>DEFINITION_ORDER</sorting>
+@@ -326,6 +274,11 @@
+             <path>
+               <item name="talent-record-forms" type="b2602c69:ProjectViewProjectNode" />
+               <item name="talent-record-forms" type="462c0819:PsiDirectoryNode" />
++              <item name="config" type="462c0819:PsiDirectoryNode" />
++            </path>
++            <path>
++              <item name="talent-record-forms" type="b2602c69:ProjectViewProjectNode" />
++              <item name="talent-record-forms" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+@@ -553,6 +506,7 @@
+       <workItem from="1525960476331" duration="10040000" />
+       <workItem from="1526024986600" duration="13793000" />
+       <workItem from="1526201142346" duration="22968000" />
++      <workItem from="1526476518163" duration="1239000" />
+     </task>
+     <task id="LOCAL-00001" summary="- Resolving issues in the TypeScript compiler configurations.&#10;- Added the plumping of Risks and Business Functions lookup data.&#10;- Lookup data plumping code currently reads from mock data.i.e. not connected to SharePoint.">
+       <created>1525606067803</created>
+@@ -678,7 +632,7 @@
+     <servers />
+   </component>
+   <component name="TimeTrackingManager">
+-    <option name="totallyTimeSpent" value="170381000" />
++    <option name="totallyTimeSpent" value="171620000" />
+   </component>
+   <component name="TodoView" selected-index="2">
+     <todo-panel id="selected-file">
+@@ -690,55 +644,55 @@
+     </todo-panel>
+   </component>
+   <component name="ToolWindowManager">
+-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
++    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+     <layout>
+       <window_info anchor="bottom" id="TODO" order="6" weight="0.7396387" />
+       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50027305" side_tool="true" weight="0.26918918" />
+-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32731137" />
+-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49972692" visible="true" weight="0.69793326" />
++      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49972692" weight="0.18384697" />
+       <window_info anchor="bottom" auto_hide="true" id="Run" order="2" sideWeight="0.49972692" weight="0.3290938" />
+       <window_info id="npm" order="4" sideWeight="0.3607532" side_tool="true" weight="0.19704953" />
+       <window_info anchor="bottom" auto_hide="true" id="Terminal" order="10" weight="0.36663124" />
+-      <window_info id="Gulp" order="2" sideWeight="0.36875665" side_tool="true" weight="0.29109776" />
++      <window_info id="Gulp" order="2" sideWeight="0.36981934" side_tool="true" visible="true" weight="0.25505188" />
+       <window_info anchor="bottom" id="TypeScript" order="9" sideWeight="0.49972692" weight="0.36875665" />
+-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63124335" visible="true" weight="0.2881754" />
++      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.63018066" visible="true" weight="0.25505188" />
+       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+-      <window_info anchor="bottom" id="Find" order="1" weight="0.35175344" />
+       <window_info id="Structure" order="1" sideWeight="0.46543002" side_tool="true" weight="0.26160568" />
+       <window_info id="Favorites" order="3" side_tool="true" />
+       <window_info anchor="bottom" id="Debug" order="3" weight="0.24959217" />
+       <window_info anchor="bottom" id="Thumbnails" order="11" weight="0.32943678" />
+       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
++      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
++      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32731137" />
+       <window_info anchor="bottom" id="REST Client" order="15" weight="0.71675676" />
++      <window_info anchor="bottom" id="Messages" order="12" />
+       <window_info anchor="bottom" id="Message" order="0" />
+       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+-      <window_info anchor="bottom" id="Messages" order="12" />
++      <window_info anchor="bottom" id="Find" order="1" weight="0.35175344" />
+     </layout>
+     <layout-to-restore>
+-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49972692" weight="0.5078044" />
+       <window_info id="Gulp" order="2" sideWeight="0.3598131" side_tool="true" weight="0.23393045" />
+       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6401869" visible="true" weight="0.23393045" />
+       <window_info id="npm" order="3" sideWeight="0.46118012" side_tool="true" weight="0.18124342" />
+       <window_info anchor="bottom" auto_hide="true" id="Run" order="2" sideWeight="0.49972692" weight="0.29344434" />
+       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
++      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+       <window_info anchor="bottom" id="Thumbnails" order="7" weight="0.32943678" />
+       <window_info id="Structure" order="1" sideWeight="0.46543002" side_tool="true" weight="0.26160568" />
+       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+       <window_info anchor="bottom" id="TODO" order="6" weight="0.32943678" />
+       <window_info anchor="bottom" id="TypeScript" order="10" sideWeight="0.49972692" weight="0.36981934" />
+-      <window_info anchor="bottom" id="Message" order="0" />
++      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32845187" />
+       <window_info anchor="bottom" id="Debug" order="3" weight="0.25078043" />
+       <window_info anchor="bottom" auto_hide="true" id="Terminal" order="11" weight="0.38469714" />
+       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50027305" side_tool="true" weight="0.4070138" />
+       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
++      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49972692" weight="0.5078044" />
+       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+       <window_info anchor="bottom" id="File Transfer" order="14" weight="0.32882413" />
+-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32845187" />
++      <window_info anchor="bottom" id="Message" order="0" />
+       <window_info anchor="bottom" id="Messages" order="13" />
+       <window_info id="Favorites" order="4" side_tool="true" />
+     </layout-to-restore>
+@@ -856,6 +810,42 @@
+     </breakpoint-manager>
+   </component>
+   <component name="editorHistoryManager">
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx">
++      <provider selected="true" editor-type-id="text-editor">
++        <state>
++          <folding>
++            <element signature="e#0#31#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/stores/LookupDataStore.ts">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="594">
++          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="324">
++          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
++          <folding>
++            <element signature="e#0#31#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/stores/TalentsStore.ts">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="342">
++          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
++          <folding>
++            <element signature="e#0#70#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
+     <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/ant-default-vars.less" />
+     <entry file="file://$PROJECT_DIR$/src/ant-theme-vars.less">
+       <provider selected="true" editor-type-id="text-editor">
+@@ -948,13 +938,6 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="1224">
+-          <caret line="68" column="19" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/ant-default-vars.less" />
+     <entry file="file://$PROJECT_DIR$/gulpfile.js">
+       <provider selected="true" editor-type-id="text-editor">
+@@ -998,13 +981,6 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/package.json">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="648">
+-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/ITalentRecordEditorProps.ts">
+       <provider selected="true" editor-type-id="text-editor">
+         <state>
+@@ -1016,27 +992,11 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="193">
+           <caret line="149" column="157" selection-start-line="149" selection-start-column="157" selection-end-line="149" selection-end-column="157" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/src/stores/AppStore.ts">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/src/stores/services/TalentRecordsService.ts">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="90">
+-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+         </state>
+       </provider>
+     </entry>
+     <entry file="file://$PROJECT_DIR$/src/stores/LookupDataStores/RiskLookupDataStore.ts">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state>
+-          <folding>
+-            <element signature="e#0#71#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
++      <provider selected="true" editor-type-id="text-editor" />
+     </entry>
+     <entry file="file://$PROJECT_DIR$/src/ant-theme-vars.less">
+       <provider selected="true" editor-type-id="text-editor">
+@@ -1045,13 +1005,6 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/UserSelector.tsx">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="490">
+-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.module.scss.ts">
+       <provider selected="true" editor-type-id="text-editor">
+         <state>
+@@ -1075,12 +1028,6 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.module.scss">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/.yo-rc.json">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="306">
+@@ -1088,25 +1035,7 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/stores/services/mockData/Functions.ts">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/src/stores/services/RisksService.ts">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state>
+-          <folding>
+-            <element signature="e#0#66#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/.editorconfig">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordFormsProps.js">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/src/stores/services/mockData/BusinessUnits.ts">
+       <provider selected="true" editor-type-id="text-editor" />
+     </entry>
+     <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/CascadeSelector.tsx">
+@@ -1120,9 +1049,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="216">
+           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="26" />
+-          <folding>
+-            <element signature="e#0#31#0" expanded="true" />
+-          </folding>
+         </state>
+       </provider>
+     </entry>
+@@ -1133,17 +1059,23 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/stores/TalentsStore.ts">
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/Selector.tsx">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="288">
++          <caret line="16" selection-start-line="16" selection-end-line="16" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/stores/services/mockData/Talents.ts">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="76">
+-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
++        <state relative-caret-position="18">
++          <caret line="6" column="12" selection-start-line="1" selection-start-column="1" selection-end-line="24" selection-end-column="5" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/Selector.tsx">
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="288">
+-          <caret line="16" selection-start-line="16" selection-end-line="16" />
++        <state>
+           <folding>
+             <element signature="e#0#31#0" expanded="true" />
+           </folding>
+@@ -1152,45 +1084,78 @@
+     </entry>
+     <entry file="file://$PROJECT_DIR$/src/stores/LookupDataStore.ts">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="202">
++        <state relative-caret-position="18">
+           <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx">
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="5058">
+-          <caret line="250" column="39" selection-start-line="250" selection-start-column="39" selection-end-line="250" selection-end-column="39" />
++        <state relative-caret-position="360">
++          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+           <folding>
+             <element signature="e#0#31#0" expanded="true" />
+-            <element signature="e#747#791#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/TalentRecordFormsWebPart.tsx">
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/ITalentRecordFormsProps.js">
++      <provider selected="true" editor-type-id="text-editor" />
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/stores/TalentsStore.ts">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state>
++        <state relative-caret-position="598">
++          <caret line="180" column="3" lean-forward="true" selection-start-line="180" selection-start-column="3" selection-end-line="180" selection-end-column="3" />
+           <folding>
+-            <element signature="e#0#31#0" expanded="true" />
++            <element signature="e#0#70#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/SliderSelector.tsx">
++    <entry file="file://$PROJECT_DIR$/src/stores/services/TalentRecordsService.ts">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="378">
+-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
++        <state relative-caret-position="90">
++          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/TalentRecordEditor.tsx">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="54">
++          <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+           <folding>
+             <element signature="e#0#31#0" expanded="true" />
++            <element signature="e#747#791#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/stores/services/mockData/Talents.ts">
++    <entry file="file://$PROJECT_DIR$/package-lock.json">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="20">
+-          <caret line="6" column="12" selection-start-line="1" selection-start-column="1" selection-end-line="24" selection-end-column="5" />
++        <state relative-caret-position="282">
++          <caret line="3724" column="10" selection-start-line="3724" selection-start-column="5" selection-end-line="3724" selection-end-column="10" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/config/package-solution.json">
++      <provider selected="true" editor-type-id="text-editor" />
++    </entry>
++    <entry file="file://$PROJECT_DIR$/package.json">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="102">
++          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/webparts/talentRecordForms/components/TalentRecordEditor/controls/UserSelector.tsx">
++      <provider selected="true" editor-type-id="text-editor" />
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/stores/AppStore.ts">
++      <provider selected="true" editor-type-id="text-editor">
++        <state>
++          <folding>
++            <element signature="e#0#49#0" expanded="true" />
++          </folding>
+         </state>
+       </provider>
+     </entry>
+Index: ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Models/Talent.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Web;\n\nnamespace Kier.TalentPortal.WebAPI.Models\n{\n    public class Talent\n    {\n        public int Id { get; set; }\n        public string EmployeeId { get; set; }\n        public string Name { get; set; }\n        public string Manager { get; set; }\n        public string AreaHead { get; set; }\n        public string Function { get; set; }\n        public string Division { get; set; }\n        public string Unit { get; set; }\n        public string Stream { get; set; }\n        public string Location { get; set; }\n        public string BusinessRisk { get; set; }\n        public string FlightRisk { get; set; }\n        public string Performance { get; set; }\n        public string Potential { get; set; }\n        public string Grade { get; set; }\n        public string Movement { get; set; }\n        public string Requirements_01_category { get; set; }\n        public string Requirements_01_subcategory { get; set; }\n        public string Requirements_02_category { get; set; }\n        public string Requirements_02_subcategory { get; set; }\n        public string Notes { get; set; }\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Models/Talent.cs	(date 1526454522000)
++++ ../../backend/Kier.TalentPortal.WebAPI/Kier.TalentPortal.WebAPI/Models/Talent.cs	(date 1526475679092)
+@@ -2,6 +2,7 @@
+ using System.Collections.Generic;
+ using System.Linq;
+ using System.Web;
++using Microsoft.SharePoint.Client;
+ 
+ namespace Kier.TalentPortal.WebAPI.Models
+ {
+@@ -28,5 +29,57 @@
+         public string Requirements_02_category { get; set; }
+         public string Requirements_02_subcategory { get; set; }
+         public string Notes { get; set; }
++        public int SubmissionYear { get; set; }
++        public bool IsCurrent { get; set; }
++        public Talent PreviousYear { get; set; }
++
++        public static Talent FromSPListItem(ListItem item)
++        {
++            var talent = new Talent();
++             talent.Division = item[Constants.Talent_Record_Division].ToString() ;
++            talent.Stream = item[Constants.Talent_Record_Business_Stream].ToString() ;
++            talent.Unit = item[Constants.Talent_Record_Business_Unit].ToString() ;
++            talent.AreaHead = item[Constants.Talent_Record_Area_Head].ToString();
++            talent.BusinessRisk = item[Constants.Talent_Record_Business_Risk].ToString();
++            talent.Notes = item[Constants.Talent_Record_Development_Notes] as string;
++            talent.EmployeeId = item[Constants.Talent_Record_Employee_Id] as string;
++            talent.FlightRisk = item[Constants.Talent_Record_Flight_Risk] as string;
++            talent.Function = item[Constants.Talent_Record_Function] as string;
++            talent.Grade = item[Constants.Talent_Record_Grade] as string;
++            talent.Location = item[Constants.Talent_Record_Location] as string;
++            talent.Movement = item[Constants.Talent_Record_Movement] as string;
++            talent.Performance = item[Constants.Talent_Record_Performance] as string;
++            talent.Potential = item[Constants.Talent_Record_Potential] as string;
++            talent.IsCurrent = (item[Constants.Talent_Record_Is_Current_Submission] != null)
++                ? bool.Parse(item[Constants.Talent_Record_Is_Current_Submission].ToString())
++                : false;
++            talent.SubmissionYear = (item[Constants.Talent_Record_Submission_Year] != null)
++                ? int.Parse(item[Constants.Talent_Record_Submission_Year].ToString())
++                : -1;
++            talent.Id = (item["ID"]!=null)? int.Parse(item["ID"].ToString()):-1;
++            return talent;
++        }
++
++        public static ListItem ToSPListItem(Talent talent, ListItem listItem)
++        {
++  
++            listItem[Constants.Talent_Record_Division] = talent.Division;
++            listItem[Constants.Talent_Record_Business_Stream] = talent.Stream;
++            listItem[Constants.Talent_Record_Business_Unit] = talent.Unit;
++            listItem[Constants.Talent_Record_Area_Head] = talent.AreaHead;
++            listItem[Constants.Talent_Record_Business_Risk] = talent.BusinessRisk;
++            listItem[Constants.Talent_Record_Development_Notes] = talent.Notes;
++            listItem[Constants.Talent_Record_Employee_Id] = talent.EmployeeId;
++            listItem[Constants.Talent_Record_Flight_Risk] = talent.FlightRisk;
++            listItem[Constants.Talent_Record_Function] = talent.Function;
++            listItem[Constants.Talent_Record_Grade] = talent.Grade;
++            listItem[Constants.Talent_Record_Location] = talent.Location;
++            listItem[Constants.Talent_Record_Movement] = talent.Movement;
++            listItem[Constants.Talent_Record_Performance] = talent.Performance;
++            listItem[Constants.Talent_Record_Potential] = talent.Potential;
++            listItem[Constants.Talent_Record_Submission_Year] = talent.SubmissionYear;
++            //listItem["ID"] = talent.Id;
++            return listItem;
++        }
+     }
+ }
+\ No newline at end of file

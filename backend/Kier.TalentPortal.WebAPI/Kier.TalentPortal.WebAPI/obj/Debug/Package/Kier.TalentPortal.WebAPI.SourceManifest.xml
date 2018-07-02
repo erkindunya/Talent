@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Dev\Kier\Kier_Talent_DB\backend\Kier.TalentPortal.WebAPI\Kier.TalentPortal.WebAPI\obj\Debug\Package\PackageTmp" />
+  <setAcl path="C:\Dev\Kier\Kier_Talent_DB\backend\Kier.TalentPortal.WebAPI\Kier.TalentPortal.WebAPI\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Dev\Kier\Kier_Talent_DB\backend\Kier.TalentPortal.WebAPI\Kier.TalentPortal.WebAPI\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
